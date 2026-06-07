@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>คำนวณค่าล่วงเวลา OT 2567 | ถูกต้องตามกฎหมายแรงงาน มาตรา 61-65 — WorkerThai</title>
+<meta name="description" content="คำนวณค่าล่วงเวลา OT ฟรี วันธรรมดา วันหยุด วันหยุดนักขัตฤกษ์ อัตรา 1.5x 2x 3x ถูกต้องตาม พ.ร.บ. คุ้มครองแรงงาน มาตรา 61-65">
+<meta name="keywords" content="คำนวณ OT,ค่าล่วงเวลา,overtime,มาตรา 61,กฎหมายแรงงาน,คำนวณเงินเดือน">
+<meta property="og:title" content="คำนวณค่าล่วงเวลา OT 2567 — WorkerThai">
+<meta property="og:description" content="คำนวณ OT ฟรี ถูกต้องตามกฎหมาย วันธรรมดา วันหยุด วันนักขัตฤกษ์">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://workerthai.com/ot.html">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://workerthai.com/ot.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "คำนวณค่าล่วงเวลา OT",
+  "url": "https://workerthai.com/ot.html",
+  "description": "เครื่องมือคำนวณค่าล่วงเวลาตามพ.ร.บ.คุ้มครองแรงงาน มาตรา 61-65",
+  "applicationCategory": "FinanceApplication",
+  "inLanguage": "th",
+  "offers": {"@type":"Offer","price":"0","priceCurrency":"THB"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "OT วันธรรมดาได้กี่เท่า?",
+      "acceptedAnswer": {"@type": "Answer", "text": "1.5 เท่าของอัตราค่าจ้างต่อชั่วโมง สำหรับชั่วโมงที่ทำงานเกินเวลาปกติในวันธรรมดา"}
+    },
+    {
+      "@type": "Question",
+      "name": "OT วันหยุดได้กี่เท่า?",
+      "acceptedAnswer": {"@type": "Answer", "text": "ทำงานในเวลาปกติวันหยุด = 2 เท่า, ทำงานนอกเวลาปกติวันหยุด = 3 เท่า"}
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0f2744;--navy-mid:#1a3a5c;--gold:#c8973a;--gold-light:#e8b86d;
+  --cream:#faf7f2;--cream-dark:#f0ebe0;--text:#1a1a2e;--text-muted:#5a5a6e;
+  --white:#ffffff;--success:#1a6b3c;--danger:#a32d2d;--border:rgba(15,39,68,0.1);
+  --info:#0c447c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Sarabun',sans-serif;background:var(--cream);color:var(--text);line-height:1.7}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(15,39,68,0.97);backdrop-filter:blur(12px);padding:0 5vw}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);text-decoration:none}
+.nav-logo span{color:rgba(255,255,255,0.5);font-family:'Sarabun',sans-serif;font-weight:300;font-size:13px;margin-left:8px}
+.nav-back{color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px;display:flex;align-items:center;gap:6px}
+.nav-back:hover{color:var(--gold-light)}
+.page-hero{background:var(--navy);padding:100px 5vw 48px;text-align:center}
+.page-hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(200,151,58,0.12);border:1px solid rgba(200,151,58,0.25);color:var(--gold-light);font-size:12px;padding:5px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:0.05em}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);color:var(--white);margin-bottom:12px;line-height:1.3}
+.page-hero p{font-size:15px;color:rgba(255,255,255,0.55);max-width:540px;margin:0 auto}
+.main-wrap{max-width:860px;margin:0 auto;padding:40px 5vw 80px}
+.ad-zone{background:var(--cream-dark);border:1px dashed rgba(15,39,68,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:12px;margin:24px 0}
+.ad-top{height:90px}
+.ad-mid{height:250px}
+.calc-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:32px;margin-bottom:24px;box-shadow:0 2px 20px rgba(15,39,68,0.04)}
+.law-badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:4px 12px;border-radius:20px;background:rgba(200,151,58,0.08);color:var(--gold);border:1px solid rgba(200,151,58,0.2);margin-bottom:20px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13px;font-weight:500;color:var(--text);margin-bottom:6px}
+.field input,.field select{width:100%;padding:10px 14px;font-size:15px;border:1px solid var(--border);border-radius:8px;background:var(--white);color:var(--text);font-family:'Sarabun',sans-serif;transition:border-color .2s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,151,58,0.1)}
+.field-hint{font-size:11px;color:var(--text-muted);margin-top:4px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+
+.day-type-label{font-size:13px;font-weight:500;color:var(--text);margin-bottom:10px}
+.day-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px}
+.day-btn{padding:14px 10px;font-size:13px;border:1px solid var(--border);border-radius:10px;background:var(--cream);color:var(--text-muted);cursor:pointer;text-align:center;font-family:'Sarabun',sans-serif;transition:all .15s;line-height:1.4}
+.day-btn:hover{border-color:rgba(200,151,58,0.4);background:rgba(200,151,58,0.04)}
+.day-btn.active{border-color:var(--gold);background:rgba(200,151,58,0.08);color:var(--navy);font-weight:500}
+.day-btn .rate-tag{display:block;font-size:11px;color:var(--gold);margin-top:4px;font-weight:600}
+
+.calc-btn{width:100%;padding:14px;font-size:16px;font-weight:600;background:var(--navy);color:var(--white);border:none;border-radius:10px;cursor:pointer;font-family:'Sarabun',sans-serif;transition:all .2s;margin-top:8px}
+.calc-btn:hover{background:var(--navy-mid);transform:translateY(-1px)}
+
+.result-wrap{display:none}
+.result-wrap.show{display:block}
+.result-main{background:var(--navy);border-radius:12px;padding:28px;margin-bottom:16px;text-align:center}
+.result-label{font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:6px;letter-spacing:0.05em}
+.result-amount{font-size:48px;font-weight:600;color:var(--gold-light);font-family:'Playfair Display',serif;line-height:1.1}
+.result-unit{font-size:20px;color:rgba(255,255,255,0.5);font-family:'Sarabun',sans-serif;font-weight:300;margin-left:4px}
+.result-basis{font-size:13px;color:rgba(255,255,255,0.4);margin-top:10px}
+
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.result-stat{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center}
+.result-stat-val{font-size:20px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.result-stat-label{font-size:11px;color:var(--text-muted)}
+
+.breakdown{background:var(--cream-dark);border-radius:10px;padding:20px;margin-bottom:16px}
+.breakdown-title{font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:14px;letter-spacing:0.05em;text-transform:uppercase}
+.brow{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(15,39,68,0.06);font-size:13px}
+.brow:last-child{border-bottom:none;font-weight:600;font-size:14px;color:var(--navy);margin-top:4px}
+.brow .bl{color:var(--text-muted)}
+.brow .br{color:var(--text)}
+
+.info-box{border-left:3px solid var(--info);border-radius:0 10px 10px 0;background:rgba(12,68,124,0.06);padding:12px 16px;font-size:13px;color:var(--info);line-height:1.6;margin-bottom:16px}
+.action-row{display:flex;gap:10px;margin-top:8px}
+.action-btn{flex:1;padding:10px;font-size:13px;border:1px solid var(--border);border-radius:8px;background:var(--white);color:var(--text-muted);cursor:pointer;font-family:'Sarabun',sans-serif;display:flex;align-items:center;justify-content:center;gap:6px;transition:all .15s}
+.action-btn:hover{background:var(--cream-dark)}
+
+.rate-section{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:24px}
+.rate-section h2{font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:6px}
+.rate-section p{font-size:13px;color:var(--text-muted);margin-bottom:20px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;padding:10px 14px;font-size:12px;font-weight:600;color:var(--text-muted);background:var(--cream-dark);letter-spacing:0.04em}
+td{padding:12px 14px;border-bottom:1px solid var(--border);color:var(--text)}
+tr:last-child td{border-bottom:none}
+.rate-pill{display:inline-block;padding:2px 10px;border-radius:10px;font-size:12px;font-weight:600}
+.r15{background:rgba(200,151,58,0.1);color:#854F0B}
+.r2{background:rgba(26,107,60,0.1);color:var(--success)}
+.r3{background:rgba(163,45,45,0.1);color:var(--danger)}
+
+.faq-section{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:24px}
+.faq-section h2{font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:20px}
+.faq-item{border-bottom:1px solid var(--border);padding:4px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{padding:14px 0;font-size:14px;font-weight:500;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-q::after{content:'+';font-size:20px;color:var(--gold);flex-shrink:0;transition:transform .2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:all .3s;font-size:13px;color:var(--text-muted);line-height:1.8}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:14px}
+
+.disclaimer{background:var(--cream-dark);border-radius:10px;padding:16px 20px;font-size:12px;color:var(--text-muted);line-height:1.7;margin-bottom:24px}
+footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:32px 5vw}
+.footer-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:'Playfair Display',serif;color:var(--gold);font-size:16px}
+.footer-links{display:flex;gap:20px}
+.footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:12px}
+.footer-links a:hover{color:var(--gold-light)}
+.footer-note{font-size:11px;color:rgba(255,255,255,0.2);width:100%;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.06)}
+
+@media(max-width:600px){
+  .row2,.row3{grid-template-columns:1fr}
+  .day-grid{grid-template-columns:1fr}
+  .result-grid{grid-template-columns:1fr}
+  .action-row{flex-direction:column}
+  .result-amount{font-size:36px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">WorkerThai<span>รู้สิทธิ์ก่อน ตัดสินใจได้เอง</span></a>
+    <a href="/" class="nav-back">← กลับหน้าหลัก</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-badge">⏰ อัพเดทตาม พ.ร.บ. คุ้มครองแรงงาน 2567</div>
+  <h1>คำนวณค่าล่วงเวลา OT</h1>
+  <p>วันธรรมดา วันหยุด วันหยุดนักขัตฤกษ์ — ถูกต้องตามมาตรา 61–65 ใช้ฟรีทันที</p>
+</div>
+
+<div class="main-wrap">
+
+  <div class="ad-zone ad-top">โฆษณา — Google AdSense 728×90</div>
+
+  <div class="calc-card">
+    <div class="law-badge">⚖️ มาตรา 61–65 พ.ร.บ. คุ้มครองแรงงาน พ.ศ. 2541</div>
+
+    <div class="field">
+      <label for="salary">อัตราค่าจ้าง (บาท/เดือน)</label>
+      <input type="number" id="salary" placeholder="เช่น 25000" min="0" oninput="updateHourlyRate()">
+      <div class="field-hint">ระบบจะคำนวณอัตรารายชั่วโมงให้อัตโนมัติ (÷ 30 ÷ 8 ชม.)</div>
+    </div>
+
+    <div class="field">
+      <label>อัตราค่าจ้างต่อชั่วโมง (คำนวณให้อัตโนมัติ)</label>
+      <input type="number" id="hourlyRate" placeholder="หรือระบุตรงนี้เลย" min="0" step="0.01">
+      <div class="field-hint">พนักงานรายชั่วโมงหรือรายวันสามารถระบุโดยตรงได้</div>
+    </div>
+
+    <div class="day-type-label">ประเภทวันที่ทำ OT</div>
+    <div class="day-grid" id="dayGrid">
+      <button class="day-btn active" data-type="weekday" onclick="selectDay(this)">
+        วันธรรมดา<span class="rate-tag">OT = 1.5x</span>
+      </button>
+      <button class="day-btn" data-type="weekend-normal" onclick="selectDay(this)">
+        วันหยุดประจำสัปดาห์<br>(ในเวลางาน)<span class="rate-tag">= 1x เพิ่ม</span>
+      </button>
+      <button class="day-btn" data-type="weekend-ot" onclick="selectDay(this)">
+        วันหยุดประจำสัปดาห์<br>(นอกเวลางาน)<span class="rate-tag">OT = 3x</span>
+      </button>
+      <button class="day-btn" data-type="holiday-normal" onclick="selectDay(this)">
+        วันหยุดนักขัตฤกษ์<br>(ในเวลางาน)<span class="rate-tag">= 2x</span>
+      </button>
+      <button class="day-btn" data-type="holiday-ot" onclick="selectDay(this)">
+        วันหยุดนักขัตฤกษ์<br>(นอกเวลางาน)<span class="rate-tag">OT = 3x</span>
+      </button>
+      <button class="day-btn" data-type="custom" onclick="selectDay(this)">
+        กำหนดอัตราเอง<span class="rate-tag">ระบุ x เอง</span>
+      </button>
+    </div>
+
+    <div class="row2" id="customRateField" style="display:none">
+      <div class="field">
+        <label for="customRate">อัตราคูณ (เช่น 1.5, 2, 3)</label>
+        <input type="number" id="customRate" placeholder="เช่น 1.5" min="1" step="0.5" value="1.5">
+      </div>
+    </div>
+
+    <div class="row2">
+      <div class="field">
+        <label for="otHours">จำนวนชั่วโมง OT</label>
+        <input type="number" id="otHours" placeholder="เช่น 3" min="0" step="0.5">
+      </div>
+      <div class="field">
+        <label for="otDays">จำนวนวัน (ถ้ามากกว่า 1 วัน)</label>
+        <input type="number" id="otDays" placeholder="เช่น 5" min="1" value="1">
+      </div>
+    </div>
+
+    <button class="calc-btn" onclick="calculate()">⏰ คำนวณค่า OT</button>
+  </div>
+
+  <div class="result-wrap" id="resultWrap">
+    <div class="result-main">
+      <div class="result-label">ค่าล่วงเวลารวม</div>
+      <div><span class="result-amount" id="resAmount">0</span><span class="result-unit">บาท</span></div>
+      <div class="result-basis" id="resBasis"></div>
+    </div>
+
+    <div class="result-grid" id="resGrid"></div>
+    <div class="breakdown" id="resBreakdown"></div>
+    <div id="resInfo"></div>
+
+    <div class="action-row">
+      <button class="action-btn" onclick="copyResult()">📋 คัดลอกผล</button>
+      <button class="action-btn" onclick="window.print()">🖨️ พิมพ์/PDF</button>
+      <button class="action-btn" onclick="resetCalc()">🔄 คำนวณใหม่</button>
+    </div>
+
+    <div class="ad-zone ad-mid" style="margin-top:24px">โฆษณา — Google AdSense 300×250</div>
+  </div>
+
+  <div class="rate-section">
+    <h2>อัตราค่าล่วงเวลาตามกฎหมาย</h2>
+    <p>พ.ร.บ. คุ้มครองแรงงาน พ.ศ. 2541 มาตรา 61–65</p>
+    <table>
+      <thead><tr><th>สถานการณ์</th><th>อัตราที่ได้รับ</th><th>มาตรา</th></tr></thead>
+      <tbody>
+        <tr><td>OT วันธรรมดา (นอกเวลางานปกติ)</td><td><span class="rate-pill r15">1.5 เท่า</span></td><td>61</td></tr>
+        <tr><td>ทำงานวันหยุดประจำสัปดาห์ (ในเวลางาน)</td><td><span class="rate-pill r15">+1 เท่า (รวม 2)</span></td><td>62</td></tr>
+        <tr><td>OT วันหยุดประจำสัปดาห์ (นอกเวลางาน)</td><td><span class="rate-pill r3">3 เท่า</span></td><td>63</td></tr>
+        <tr><td>ทำงานวันหยุดนักขัตฤกษ์ (ในเวลางาน)</td><td><span class="rate-pill r2">2 เท่า</span></td><td>64</td></tr>
+        <tr><td>OT วันหยุดนักขัตฤกษ์ (นอกเวลางาน)</td><td><span class="rate-pill r3">3 เท่า</span></td><td>65</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="faq-section">
+    <h2>คำถามที่พบบ่อย</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">นายจ้างบังคับให้ทำ OT ได้ไหม?</div>
+      <div class="faq-a">โดยทั่วไปนายจ้างบังคับให้ทำงานล่วงเวลาไม่ได้ ต้องได้รับความยินยอมจากลูกจ้างก่อน ยกเว้นงานที่มีความจำเป็นเร่งด่วนตามที่กฎหมายกำหนด เช่น งานฉุกเฉิน งานที่ต้องทำต่อเนื่อง หรืองานตามฤดูกาลที่ต้องทำให้เสร็จภายในเวลา</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">OT สูงสุดต่อสัปดาห์ได้กี่ชั่วโมง?</div>
+      <div class="faq-a">กฎหมายกำหนดให้ทำงานล่วงเวลาได้ไม่เกิน 36 ชั่วโมงต่อสัปดาห์ สำหรับงานทั่วไป และไม่เกิน 36 ชั่วโมงต่อสัปดาห์สำหรับงานที่อาจเป็นอันตราย</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">ค่าจ้างรายชั่วโมงคำนวณอย่างไร?</div>
+      <div class="faq-a">สำหรับพนักงานรายเดือน: ค่าจ้างรายชั่วโมง = เงินเดือน ÷ 30 วัน ÷ 8 ชั่วโมง ตัวอย่าง: เงินเดือน 25,000 บาท → รายชั่วโมง = 25,000 ÷ 30 ÷ 8 = 104.17 บาท/ชั่วโมง</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">นายจ้างไม่จ่าย OT ทำอย่างไร?</div>
+      <div class="faq-a">ร้องเรียนได้ที่สำนักงานสวัสดิการและคุ้มครองแรงงานในจังหวัดที่ทำงาน สายด่วน 1546 ฟรีตลอด 24 ชั่วโมง ควรเก็บหลักฐานไว้ด้วย เช่น ตารางงาน สลิปเงินเดือน หรือข้อความที่นายจ้างสั่งให้ทำ OT</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">พนักงานระดับผู้บริหารมีสิทธิ์รับค่า OT ไหม?</div>
+      <div class="faq-a">ผู้บริหารที่มีอำนาจจ้างและเลิกจ้างได้ หรือผู้ที่ได้รับค่าจ้างในลักษณะอื่นที่ไม่ใช่รายชั่วโมง อาจไม่ได้รับสิทธิ์ค่า OT ตามกฎหมาย ขึ้นอยู่กับลักษณะงานและสัญญาจ้างที่ระบุไว้</div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <strong>ข้อควรทราบ:</strong> เครื่องมือนี้ใช้สำหรับประมาณการเบื้องต้นเท่านั้น ผลลัพธ์ที่ได้ไม่ใช่คำปรึกษาทางกฎหมาย กรณีพิพาทควรปรึกษาสำนักงานสวัสดิการและคุ้มครองแรงงาน สายด่วน 1546
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="footer-logo">WorkerThai</a>
+    <div class="footer-links">
+      <a href="/">หน้าหลัก</a>
+      <a href="severance.html">เงินชดเชย</a>
+      <a href="transfer.html">ค่าโอนที่ดิน</a>
+      <a href="mailto:contact@workerthai.com">ติดต่อ</a>
+    </div>
+    <div class="footer-note">WorkerThai เป็นเครื่องมือช่วยประมาณการ ไม่ใช่คำปรึกษาทางกฎหมาย | © 2567 WorkerThai</div>
+  </div>
+</footer>
+
+<script>
+let selectedDayType = 'weekday';
+const rates = {
+  'weekday': 1.5,
+  'weekend-normal': 1,
+  'weekend-ot': 3,
+  'holiday-normal': 2,
+  'holiday-ot': 3,
+  'custom': null
+};
+
+function selectDay(btn){
+  document.querySelectorAll('.day-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  selectedDayType = btn.dataset.type;
+  document.getElementById('customRateField').style.display = selectedDayType==='custom' ? 'block' : 'none';
+  document.getElementById('resultWrap').classList.remove('show');
+}
+
+function updateHourlyRate(){
+  const sal = parseFloat(document.getElementById('salary').value);
+  if(sal > 0){
+    document.getElementById('hourlyRate').value = (sal / 30 / 8).toFixed(2);
+  }
+}
+
+function getRate(){
+  if(selectedDayType === 'custom'){
+    return parseFloat(document.getElementById('customRate').value) || 1.5;
+  }
+  return rates[selectedDayType];
+}
+
+function getDayLabel(){
+  const labels = {
+    'weekday': 'วันธรรมดา (OT 1.5x)',
+    'weekend-normal': 'วันหยุดสัปดาห์ในเวลางาน (+1x)',
+    'weekend-ot': 'วันหยุดสัปดาห์นอกเวลางาน (3x)',
+    'holiday-normal': 'วันหยุดนักขัตฤกษ์ในเวลางาน (2x)',
+    'holiday-ot': 'วันหยุดนักขัตฤกษ์นอกเวลางาน (3x)',
+    'custom': `กำหนดเอง (${getRate()}x)`
+  };
+  return labels[selectedDayType];
+}
+
+function fmt(n){ return Math.round(n*100)/100 > 0 ? parseFloat(n.toFixed(2)).toLocaleString('th-TH') : '0'; }
+
+function calculate(){
+  const hourly = parseFloat(document.getElementById('hourlyRate').value);
+  const hours = parseFloat(document.getElementById('otHours').value);
+  const days = parseInt(document.getElementById('otDays').value) || 1;
+  const rate = getRate();
+
+  if(!hourly || hourly <= 0){ alert('กรุณาระบุอัตราค่าจ้าง'); return; }
+  if(!hours || hours <= 0){ alert('กรุณาระบุจำนวนชั่วโมง OT'); return; }
+
+  const otPerDay = hourly * rate * hours;
+  const totalOt = otPerDay * days;
+  const monthSal = parseFloat(document.getElementById('salary').value) || 0;
+
+  document.getElementById('resAmount').textContent = fmt(totalOt);
+  document.getElementById('resBasis').textContent =
+    `${fmt(hourly)} บาท/ชม. × ${rate}x × ${hours} ชม. × ${days} วัน`;
+
+  document.getElementById('resGrid').innerHTML = `
+    <div class="result-stat">
+      <div class="result-stat-val">${fmt(hourly)}</div>
+      <div class="result-stat-label">บาท/ชั่วโมง</div>
+    </div>
+    <div class="result-stat">
+      <div class="result-stat-val">${rate}x</div>
+      <div class="result-stat-label">อัตราคูณ OT</div>
+    </div>
+    <div class="result-stat">
+      <div class="result-stat-val">${fmt(otPerDay)}</div>
+      <div class="result-stat-label">บาท/วัน</div>
+    </div>
+  `;
+
+  document.getElementById('resBreakdown').innerHTML = `
+    <div class="breakdown-title">รายละเอียดการคำนวณ</div>
+    <div class="brow"><span class="bl">อัตราค่าจ้างต่อชั่วโมง</span><span class="br">${fmt(hourly)} บาท</span></div>
+    <div class="brow"><span class="bl">ประเภทวัน</span><span class="br">${getDayLabel()}</span></div>
+    <div class="brow"><span class="bl">อัตราคูณ OT</span><span class="br">${rate} เท่า</span></div>
+    <div class="brow"><span class="bl">ค่า OT ต่อชั่วโมง</span><span class="br">${fmt(hourly * rate)} บาท</span></div>
+    <div class="brow"><span class="bl">จำนวนชั่วโมงต่อวัน</span><span class="br">${hours} ชั่วโมง</span></div>
+    <div class="brow"><span class="bl">จำนวนวัน</span><span class="br">${days} วัน</span></div>
+    <div class="brow"><span class="bl">รวมค่า OT ทั้งหมด</span><span class="br">${fmt(totalOt)} บาท</span></div>
+  `;
+
+  let infoHtml = '';
+  if(hours * days > 36){
+    infoHtml = `<div class="info-box">ℹ️ ชั่วโมง OT รวม ${hours * days} ชม. เกินกว่าที่กฎหมายกำหนด (สูงสุด 36 ชม./สัปดาห์) ควรตรวจสอบกับนายจ้างด้วยครับ</div>`;
+  }
+  if(monthSal > 0){
+    const pct = (totalOt / monthSal * 100).toFixed(1);
+    infoHtml += `<div class="info-box">ℹ️ ค่า OT คิดเป็น ${pct}% ของเงินเดือนในเดือนนี้</div>`;
+  }
+  document.getElementById('resInfo').innerHTML = infoHtml;
+
+  document.getElementById('resultWrap').classList.add('show');
+  document.getElementById('resultWrap').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function copyResult(){
+  const amt = document.getElementById('resAmount').textContent;
+  const basis = document.getElementById('resBasis').textContent;
+  const text = `ค่า OT: ${amt} บาท\n${basis}\nคำนวณโดย WorkerThai.com`;
+  navigator.clipboard.writeText(text).then(()=>alert('คัดลอกแล้ว!')).catch(()=>{});
+}
+
+function resetCalc(){
+  document.getElementById('resultWrap').classList.remove('show');
+  document.getElementById('salary').value = '';
+  document.getElementById('hourlyRate').value = '';
+  document.getElementById('otHours').value = '';
+  document.getElementById('otDays').value = '1';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function toggleFaq(el){
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!isOpen) item.classList.add('open');
+}
+</script>
+</body>
+</html>
