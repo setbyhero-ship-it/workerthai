@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>คำนวณวันลา 2568 | วันลาพักร้อน ลาป่วย ลากิจ ตาม พ.ร.บ. คุ้มครองแรงงาน — WorkerThai</title>
+<meta name="description" content="คำนวณสิทธิ์วันลาพักร้อน ลาป่วย ลากิจ ลาคลอด ตาม พ.ร.บ.คุ้มครองแรงงาน ถูกต้องตามกฎหมาย อัพเดท 2568">
+<meta name="keywords" content="คำนวณวันลา,วันลาพักร้อน,ลาป่วย,ลากิจ,ลาคลอด,สิทธิ์วันลา,กฎหมายแรงงาน">
+<meta property="og:title" content="คำนวณวันลา 2568 — WorkerThai">
+<meta property="og:description" content="คำนวณสิทธิ์วันลาพักร้อน ลาป่วย ลากิจ ลาคลอด ตามกฎหมายแรงงาน">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://workerthai.com/leave-calculator.html">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://workerthai.com/leave-calculator.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2430142974372435" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0f2744;--gold:#c8973a;--gold-light:#e8b86d;--cream:#faf7f2;--cream-dark:#f0ebe0;--text:#1a1a2e;--text-muted:#5a5a6e;--white:#fff;--success:#1a6b3c;--danger:#a32d2d;--border:rgba(15,39,68,0.1);--info:#0c447c;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Sarabun',sans-serif;background:var(--cream);color:var(--text);line-height:1.7}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(15,39,68,0.97);backdrop-filter:blur(12px);padding:0 5vw}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:58px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);text-decoration:none}
+.nav-logo span{color:rgba(255,255,255,0.4);font-size:13px;font-weight:300;margin-left:8px;font-family:'Sarabun',sans-serif}
+.nav-back{color:rgba(255,255,255,0.55);text-decoration:none;font-size:13px}
+.nav-back:hover{color:var(--gold-light)}
+.page-hero{background:var(--navy);padding:100px 5vw 48px;text-align:center}
+.page-hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(200,151,58,0.12);border:0.5px solid rgba(200,151,58,0.25);color:var(--gold-light);font-size:12px;padding:5px 14px;border-radius:20px;margin-bottom:16px}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,42px);color:#fff;margin-bottom:12px;line-height:1.3}
+.page-hero p{font-size:15px;color:rgba(255,255,255,0.55);max-width:600px;margin:0 auto}
+.wrap{max-width:860px;margin:0 auto;padding:36px 5vw 80px}
+.ad-zone{background:var(--cream-dark);border:0.5px dashed rgba(15,39,68,0.15);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:12px;margin:20px 0}
+.ad-top{height:90px}.ad-mid{height:250px}
+.calc-card{background:var(--white);border:0.5px solid var(--border);border-radius:16px;padding:28px;margin-bottom:20px;box-shadow:0 2px 20px rgba(15,39,68,0.04)}
+.law-badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:4px 12px;border-radius:20px;background:rgba(200,151,58,0.08);color:var(--gold);border:0.5px solid rgba(200,151,58,0.2);margin-bottom:18px}
+.sec-head{font-size:14px;font-weight:500;color:var(--navy);margin-bottom:12px;padding-bottom:8px;border-bottom:0.5px solid var(--border)}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;font-weight:500;color:var(--text);margin-bottom:5px}
+.field input,.field select{width:100%;padding:10px 14px;font-size:15px;border:0.5px solid var(--border);border-radius:8px;font-family:'Sarabun',sans-serif;color:var(--text);background:#fff;transition:border-color .2s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,151,58,0.1)}
+.field-hint{font-size:11px;color:var(--text-muted);margin-top:4px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.calc-btn{width:100%;padding:14px;font-size:16px;font-weight:600;background:var(--navy);color:#fff;border:none;border-radius:10px;cursor:pointer;font-family:'Sarabun',sans-serif;transition:all .2s;margin-top:8px}
+.calc-btn:hover{background:#1a3a5c;transform:translateY(-1px)}
+
+/* Result */
+.result-wrap{display:none}
+.result-wrap.show{display:block}
+.leave-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:18px}
+.leave-card{background:var(--white);border:0.5px solid var(--border);border-radius:13px;padding:18px;position:relative;overflow:hidden}
+.leave-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.lc-vacation::before{background:#185FA5}
+.lc-sick::before{background:#E24B4A}
+.lc-personal::before{background:#854F0B}
+.lc-maternity::before{background:#534AB7}
+.lc-icon{font-size:22px;margin-bottom:8px}
+.lc-type{font-size:11px;color:var(--text-muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:.04em}
+.lc-days{font-size:32px;font-weight:600;color:var(--navy);font-family:'Playfair Display',serif;line-height:1}
+.lc-unit{font-size:13px;color:var(--text-muted);font-weight:400;margin-left:4px}
+.lc-detail{font-size:12px;color:var(--text-muted);margin-top:6px;line-height:1.5}
+.lc-used{font-size:12px;margin-top:8px;padding-top:8px;border-top:0.5px solid var(--border)}
+.lc-remaining{font-weight:500}
+.lc-remaining.ok{color:var(--success)}
+.lc-remaining.warn{color:var(--danger)}
+
+.summary-card{background:var(--navy);border-radius:12px;padding:22px;margin-bottom:18px}
+.sc-title{font-size:13px;color:rgba(255,255,255,0.45);margin-bottom:12px;letter-spacing:.04em}
+.sc-rows{display:flex;flex-direction:column;gap:6px}
+.sc-row{display:flex;justify-content:space-between;font-size:13px;padding:7px 0;border-bottom:0.5px solid rgba(255,255,255,0.08)}
+.sc-row:last-child{border-bottom:none;padding-top:10px;margin-top:4px;font-weight:500;font-size:14px}
+.sc-label{color:rgba(255,255,255,0.55)}
+.sc-val{color:var(--gold-light);font-weight:500}
+
+.info-box{border-left:3px solid var(--info);border-radius:0 9px 9px 0;background:rgba(12,68,124,0.06);padding:12px 16px;font-size:13px;color:var(--info);line-height:1.7;margin-bottom:14px}
+.tip-box{border-left:3px solid var(--gold);border-radius:0 9px 9px 0;background:rgba(200,151,58,0.07);padding:12px 16px;font-size:13px;color:#633806;line-height:1.7;margin-bottom:14px}
+.action-row{display:flex;gap:10px;margin-top:8px}
+.action-btn{flex:1;padding:10px;font-size:13px;border:0.5px solid var(--border);border-radius:8px;background:#fff;color:var(--text-muted);cursor:pointer;font-family:'Sarabun',sans-serif;display:flex;align-items:center;justify-content:center;gap:6px;transition:all .15s}
+.action-btn:hover{background:var(--cream-dark)}
+
+/* Reference table */
+.ref-section{background:var(--white);border:0.5px solid var(--border);border-radius:16px;padding:28px;margin-bottom:20px}
+.ref-section h2{font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:6px}
+.ref-section p{font-size:13px;color:var(--text-muted);margin-bottom:18px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;padding:10px 12px;font-size:11px;font-weight:600;color:var(--text-muted);background:var(--cream-dark);letter-spacing:.04em}
+td{padding:11px 12px;border-bottom:0.5px solid var(--border);color:var(--text);line-height:1.5}
+tr:last-child td{border-bottom:none}
+.faq-section{background:var(--white);border:0.5px solid var(--border);border-radius:16px;padding:28px;margin-bottom:20px}
+.faq-section h2{font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:18px}
+.faq-item{border-bottom:0.5px solid var(--border);padding:4px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{padding:13px 0;font-size:14px;font-weight:500;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;gap:10px}
+.faq-q::after{content:'+';font-size:20px;color:var(--gold);flex-shrink:0;transition:transform .2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:all .3s;font-size:13px;color:var(--text-muted);line-height:1.8}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:12px}
+.disclaimer{background:var(--cream-dark);border-radius:10px;padding:14px 18px;font-size:12px;color:var(--text-muted);line-height:1.7;margin-bottom:20px}
+footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:30px 5vw}
+.footer-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.footer-logo{font-family:'Playfair Display',serif;color:var(--gold);font-size:16px}
+.footer-links{display:flex;gap:18px}
+.footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:12px}
+.footer-links a:hover{color:var(--gold-light)}
+.footer-note{font-size:11px;color:rgba(255,255,255,0.2);width:100%;margin-top:10px;padding-top:10px;border-top:0.5px solid rgba(255,255,255,0.06)}
+@media(max-width:600px){.leave-grid,.row2,.row3{grid-template-columns:1fr}.action-row{flex-direction:column}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">WorkerThai<span>รู้สิทธิ์ก่อน ตัดสินใจได้เอง</span></a>
+    <a href="/" class="nav-back">← กลับ</a>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-badge">📅 อัพเดทตาม พ.ร.บ. คุ้มครองแรงงาน 2568</div>
+  <h1>คำนวณสิทธิ์วันลา</h1>
+  <p>วันลาพักร้อน ลาป่วย ลากิจ ลาคลอด ลาเพื่อรับราชการทหาร — ครบทุกประเภท ถูกต้องตามกฎหมาย</p>
+</div>
+<div class="wrap">
+  <div class="ad-zone ad-top">โฆษณา — Google AdSense 728×90</div>
+  <div class="calc-card">
+    <div class="law-badge">⚖️ มาตรา 30–32 พ.ร.บ. คุ้มครองแรงงาน พ.ศ. 2541</div>
+    <div class="sec-head">ข้อมูลการทำงาน</div>
+    <div class="row2">
+      <div class="field">
+        <label>วันที่เริ่มงาน</label>
+        <input type="date" id="startDate">
+      </div>
+      <div class="field">
+        <label>วันนี้ / วันที่ต้องการคำนวณ</label>
+        <input type="date" id="calcDate">
+      </div>
+    </div>
+    <div class="row2">
+      <div class="field">
+        <label>เพศ</label>
+        <select id="gender">
+          <option value="other">ชาย / ไม่ระบุ</option>
+          <option value="female">หญิง</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>นโยบายวันลาพักร้อนบริษัท (วัน/ปี)</label>
+        <input type="number" id="companyVacation" placeholder="เช่น 10" min="0" max="365">
+        <div class="field-hint">ถ้าไม่รู้ระบบจะใช้ขั้นต่ำตามกฎหมาย (6 วัน)</div>
+      </div>
+    </div>
+    <div class="sec-head">วันลาที่ใช้ไปในปีนี้</div>
+    <div class="row3">
+      <div class="field">
+        <label>วันลาพักร้อนที่ใช้ไป (วัน)</label>
+        <input type="number" id="usedVacation" placeholder="0" min="0" value="0" oninput="autoCalc()">
+      </div>
+      <div class="field">
+        <label>วันลาป่วยที่ใช้ไป (วัน)</label>
+        <input type="number" id="usedSick" placeholder="0" min="0" value="0" oninput="autoCalc()">
+      </div>
+      <div class="field">
+        <label>วันลากิจที่ใช้ไป (วัน)</label>
+        <input type="number" id="usedPersonal" placeholder="0" min="0" value="0" oninput="autoCalc()">
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calculate()">📅 คำนวณสิทธิ์วันลา</button>
+  </div>
+
+  <div class="result-wrap" id="resultWrap">
+    <div class="summary-card">
+      <div class="sc-title">สรุปวันลาทั้งหมด</div>
+      <div class="sc-rows" id="scRows"></div>
+    </div>
+    <div class="leave-grid" id="leaveGrid"></div>
+    <div id="leaveInfo"></div>
+    <div class="action-row">
+      <button class="action-btn" onclick="copyResult()">📋 คัดลอกผล</button>
+      <button class="action-btn" onclick="resetCalc()">🔄 คำนวณใหม่</button>
+    </div>
+    <div class="ad-zone ad-mid" style="margin-top:16px">โฆษณา — Google AdSense 300×250</div>
+  </div>
+
+  <div class="ref-section">
+    <h2>สิทธิ์วันลาตามกฎหมาย 2568</h2>
+    <p>อัตราขั้นต่ำตาม พ.ร.บ. คุ้มครองแรงงาน — นายจ้างให้มากกว่านี้ได้ แต่น้อยกว่านี้ไม่ได้</p>
+    <table>
+      <thead><tr><th>ประเภทการลา</th><th>จำนวนวัน</th><th>เงื่อนไข</th><th>ได้รับค่าจ้าง?</th></tr></thead>
+      <tbody>
+        <tr><td>ลาพักร้อน</td><td>ไม่น้อยกว่า 6 วัน/ปี</td><td>ทำงานครบ 1 ปีขึ้นไป</td><td>✅ เต็มจำนวน</td></tr>
+        <tr><td>ลาป่วย</td><td>ไม่เกิน 30 วัน/ปี</td><td>ป่วยจริง มีใบแพทย์ถ้าลาเกิน 3 วัน</td><td>✅ เต็มจำนวน</td></tr>
+        <tr><td>ลากิจ</td><td>ตามที่บริษัทกำหนด</td><td>กฎหมายไม่ได้บังคับขั้นต่ำ</td><td>ตามนโยบายบริษัท</td></tr>
+        <tr><td>ลาคลอดบุตร</td><td>98 วัน (รวมก่อน-หลังคลอด)</td><td>เฉพาะมารดา</td><td>✅ 45 วัน (สปส. + นายจ้างที่เหลือ)</td></tr>
+        <tr><td>ลาทำหมัน</td><td>ตามแพทย์สั่ง</td><td>ต้องมีใบแพทย์</td><td>✅ เต็มจำนวน</td></tr>
+        <tr><td>ลารับราชการทหาร</td><td>ไม่เกิน 60 วัน/ปี</td><td>มีหมายเรียก</td><td>✅ เต็มจำนวน</td></tr>
+        <tr><td>ลาเพื่อการฝึกอบรม</td><td>ตามที่กำหนด</td><td>เพื่อประโยชน์ของลูกจ้าง</td><td>ตามข้อตกลง</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="faq-section">
+    <h2>คำถามที่พบบ่อย</h2>
+    <div class="faq-item"><div class="faq-q" onclick="tFaq(this)">วันลาพักร้อนสะสมข้ามปีได้ไหม?</div><div class="faq-a">ขึ้นอยู่กับนโยบายบริษัท กฎหมายไม่ได้บังคับให้สะสมข้ามปีได้ แต่ถ้าบริษัทมีนโยบายให้สะสมได้ ต้องปฏิบัติตาม ถ้าบริษัทไม่ให้สะสมและคุณไม่ได้ใช้ วันลาที่เหลือจะหมดอายุ — แนะนำให้ใช้ให้หมดในแต่ละปี</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="tFaq(this)">ออกจากงานโดยไม่ได้ใช้วันลาพักร้อน ได้รับเงินทดแทนไหม?</div><div class="faq-a">ได้ครับ ถ้าออกจากงานโดยไม่ได้ใช้วันลาพักร้อนที่สะสมอยู่ นายจ้างต้องจ่ายค่าจ้างทดแทนวันลาที่เหลือทั้งหมด เป็นสิทธิ์ตามมาตรา 67 พ.ร.บ. คุ้มครองแรงงาน</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="tFaq(this)">ลาป่วยต้องมีใบแพทย์เสมอไหม?</div><div class="faq-a">ลาป่วยไม่เกิน 3 วัน ไม่ต้องมีใบแพทย์ นายจ้างบังคับไม่ได้ ถ้าลาเกิน 3 วัน นายจ้างมีสิทธิ์ขอใบรับรองแพทย์ได้</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="tFaq(this)">ทำงานไม่ครบ 1 ปีมีวันลาพักร้อนไหม?</div><div class="faq-a">กฎหมายกำหนดว่าต้องทำงานครบ 1 ปีจึงมีสิทธิ์ลาพักร้อน แต่บริษัทหลายแห่งอนุญาตให้ลาพักร้อนก่อนครบ 1 ปีตามสัดส่วน ขึ้นอยู่กับนโยบายบริษัท</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="tFaq(this)">นายจ้างบังคับให้ใช้วันลาพักร้อนได้ไหม?</div><div class="faq-a">นายจ้างมีสิทธิ์กำหนดวันที่ลูกจ้างต้องหยุด เช่น ปิดโรงงาน แต่ต้องแจ้งล่วงหน้าและนับเป็นวันลาพักร้อน ไม่สามารถหักค่าจ้างแทนการให้ลาได้</div></div>
+  </div>
+  <div class="disclaimer"><strong>ข้อควรทราบ:</strong> สิทธิ์วันลาขั้นต่ำตามกฎหมาย บริษัทสามารถให้มากกว่านี้ได้ตามนโยบาย ควรตรวจสอบสัญญาจ้างและระเบียบบริษัทด้วย | สายด่วน 1546 กรมสวัสดิการ</div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="footer-logo">WorkerThai</a>
+    <div class="footer-links"><a href="/">หน้าหลัก</a><a href="severance.html">เงินชดเชย</a><a href="ot.html">คำนวณ OT</a><a href="rights-guide.html">คู่มือสิทธิ์</a></div>
+    <div class="footer-note">WorkerThai เป็นเครื่องมือช่วยประมาณการ ไม่ใช่คำปรึกษาทางกฎหมาย | © 2568 WorkerThai</div>
+  </div>
+</footer>
+<script>
+function fmt(n){return Math.round(n).toLocaleString('th-TH');}
+function calculate(){
+  var startDate=new Date(document.getElementById('startDate').value);
+  var calcDate=new Date(document.getElementById('calcDate').value);
+  var gender=document.getElementById('gender').value;
+  var compVac=parseInt(document.getElementById('companyVacation').value)||6;
+  var usedVac=parseInt(document.getElementById('usedVacation').value)||0;
+  var usedSick=parseInt(document.getElementById('usedSick').value)||0;
+  var usedPers=parseInt(document.getElementById('usedPersonal').value)||0;
+  if(!document.getElementById('startDate').value){alert('กรุณาระบุวันที่เริ่มงาน');return;}
+  if(!document.getElementById('calcDate').value){alert('กรุณาระบุวันที่คำนวณ');return;}
+  var yearsWorked=(calcDate-startDate)/(1000*60*60*24*365.25);
+  var vacDays=Math.max(compVac,6);
+  if(yearsWorked<1)vacDays=0;
+  var sickDays=30;
+  var matDays=gender==='female'?98:0;
+  var remVac=Math.max(0,vacDays-usedVac);
+  var remSick=Math.max(0,sickDays-usedSick);
+  var totalUsed=usedVac+usedSick+usedPers;
+  var totalLeft=remVac+remSick;
+  document.getElementById('scRows').innerHTML=`
+    <div class="sc-row"><span class="sc-label">อายุงานปัจจุบัน</span><span class="sc-val">${Math.floor(yearsWorked)} ปี ${Math.floor((yearsWorked%1)*12)} เดือน</span></div>
+    <div class="sc-row"><span class="sc-label">วันลาที่ใช้ไปแล้ว (ปีนี้)</span><span class="sc-val">${fmt(totalUsed)} วัน</span></div>
+    <div class="sc-row"><span class="sc-label">วันลาที่เหลือ</span><span class="sc-val">${fmt(totalLeft)} วัน</span></div>
+  `;
+  var cards='';
+  cards+=`<div class="leave-card lc-vacation">
+    <div class="lc-icon">🌴</div>
+    <div class="lc-type">ลาพักร้อน</div>
+    <div><span class="lc-days">${vacDays}</span><span class="lc-unit">วัน/ปี</span></div>
+    <div class="lc-detail">${yearsWorked<1?'ต้องทำงานครบ 1 ปีก่อน':'ขั้นต่ำกฎหมาย 6 วัน · บริษัท '+compVac+' วัน'}</div>
+    <div class="lc-used">ใช้ไป ${usedVac} วัน — <span class="lc-remaining ${remVac>0?'ok':'warn'}">เหลือ ${remVac} วัน</span></div>
+  </div>`;
+  cards+=`<div class="leave-card lc-sick">
+    <div class="lc-icon">🏥</div>
+    <div class="lc-type">ลาป่วย</div>
+    <div><span class="lc-days">30</span><span class="lc-unit">วัน/ปี</span></div>
+    <div class="lc-detail">ไม่เกิน 30 วัน/ปี ลาไม่เกิน 3 วันไม่ต้องมีใบแพทย์</div>
+    <div class="lc-used">ใช้ไป ${usedSick} วัน — <span class="lc-remaining ${remSick>0?'ok':'warn'}">เหลือ ${remSick} วัน</span></div>
+  </div>`;
+  cards+=`<div class="leave-card lc-personal">
+    <div class="lc-icon">📋</div>
+    <div class="lc-type">ลากิจ</div>
+    <div><span class="lc-days">—</span></div>
+    <div class="lc-detail">กฎหมายไม่กำหนดขั้นต่ำ ขึ้นอยู่กับนโยบายบริษัท</div>
+    <div class="lc-used">ใช้ไป ${usedPers} วัน (ปีนี้)</div>
+  </div>`;
+  if(gender==='female'){
+    cards+=`<div class="leave-card lc-maternity">
+      <div class="lc-icon">👶</div>
+      <div class="lc-type">ลาคลอดบุตร</div>
+      <div><span class="lc-days">98</span><span class="lc-unit">วัน</span></div>
+      <div class="lc-detail">ไม่เกิน 98 วัน รวมก่อน-หลังคลอด ได้รับค่าจ้าง 45 วัน (สปส. 45 วัน)</div>
+    </div>`;
+  }
+  document.getElementById('leaveGrid').innerHTML=cards;
+  var info='';
+  if(yearsWorked<1){info+='<div style="border-left:3px solid #854F0B;border-radius:0 9px 9px 0;background:rgba(200,151,58,0.07);padding:12px 16px;font-size:13px;color:#633806;line-height:1.7;margin-bottom:14px">ℹ️ ทำงานยังไม่ครบ 1 ปี ยังไม่มีสิทธิ์ลาพักร้อน แต่มีสิทธิ์ลาป่วย 30 วัน/ปี และลาประเภทอื่นตามปกติ</div>';}
+  if(remVac<=2&&vacDays>0){info+='<div style="border-left:3px solid #a32d2d;border-radius:0 9px 9px 0;background:rgba(163,45,45,0.06);padding:12px 16px;font-size:13px;color:#a32d2d;line-height:1.7;margin-bottom:14px">⚠️ วันลาพักร้อนเหลือน้อยมาก ถ้าออกจากงานปีนี้ วันลาที่เหลือจะถูกจ่ายเป็นเงินแทน</div>';}
+  document.getElementById('leaveInfo').innerHTML=info;
+  document.getElementById('resultWrap').classList.add('show');
+  document.getElementById('resultWrap').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function autoCalc(){if(document.getElementById('resultWrap').classList.contains('show'))calculate();}
+function copyResult(){
+  var rows=document.getElementById('scRows');
+  navigator.clipboard.writeText('สิทธิ์วันลา WorkerThai.com\n'+rows.innerText).then(function(){alert('คัดลอกแล้ว!');}).catch(function(){});
+}
+function resetCalc(){
+  document.getElementById('resultWrap').classList.remove('show');
+  ['startDate','calcDate','companyVacation'].forEach(function(id){document.getElementById(id).value='';});
+  ['usedVacation','usedSick','usedPersonal'].forEach(function(id){document.getElementById(id).value='0';});
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function tFaq(el){var item=el.parentElement;var isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});if(!isOpen)item.classList.add('open');}
+document.getElementById('calcDate').value=new Date().toISOString().split('T')[0];
+</script>
+</body>
+</html>
