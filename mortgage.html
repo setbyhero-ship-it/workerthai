@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>คำนวณผ่อนบ้าน 2567 | ค่างวด ดอกเบี้ย ตารางผ่อน ครบในที่เดียว — WorkerThai</title>
+<meta name="description" content="คำนวณผ่อนบ้านฟรี ค่างวดรายเดือน ดอกเบี้ยรวมทั้งหมด ตารางผ่อนรายปี เปรียบเทียบผลกระทบเมื่อโปะเพิ่ม อัพเดท 2567">
+<meta name="keywords" content="คำนวณผ่อนบ้าน,ค่างวดบ้าน,ดอกเบี้ยบ้าน,สินเชื่อบ้าน,ตารางผ่อน,โปะบ้าน">
+<meta property="og:title" content="คำนวณผ่อนบ้าน 2567 — WorkerThai">
+<meta property="og:description" content="คำนวณค่างวด ดอกเบี้ยรวม ตารางผ่อนบ้านฟรี พร้อมคำนวณผลการโปะเพิ่ม">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://workerthai.com/mortgage.html">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://workerthai.com/mortgage.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "คำนวณผ่อนบ้าน",
+  "url": "https://workerthai.com/mortgage.html",
+  "description": "เครื่องมือคำนวณผ่อนบ้าน ค่างวด ดอกเบี้ย และตารางผ่อน",
+  "applicationCategory": "FinanceApplication",
+  "inLanguage": "th",
+  "offers": {"@type":"Offer","price":"0","priceCurrency":"THB"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0f2744;--navy-mid:#1a3a5c;--gold:#c8973a;--gold-light:#e8b86d;
+  --cream:#faf7f2;--cream-dark:#f0ebe0;--text:#1a1a2e;--text-muted:#5a5a6e;
+  --white:#ffffff;--success:#1a6b3c;--danger:#a32d2d;--border:rgba(15,39,68,0.1);--info:#0c447c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Sarabun',sans-serif;background:var(--cream);color:var(--text);line-height:1.7}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(15,39,68,0.97);backdrop-filter:blur(12px);padding:0 5vw}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);text-decoration:none}
+.nav-logo span{color:rgba(255,255,255,0.5);font-family:'Sarabun',sans-serif;font-weight:300;font-size:13px;margin-left:8px}
+.nav-back{color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px}
+.nav-back:hover{color:var(--gold-light)}
+.page-hero{background:var(--navy);padding:100px 5vw 48px;text-align:center}
+.page-hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(200,151,58,0.12);border:1px solid rgba(200,151,58,0.25);color:var(--gold-light);font-size:12px;padding:5px 14px;border-radius:20px;margin-bottom:16px}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);color:var(--white);margin-bottom:12px;line-height:1.3}
+.page-hero p{font-size:15px;color:rgba(255,255,255,0.55);max-width:560px;margin:0 auto}
+.main-wrap{max-width:900px;margin:0 auto;padding:40px 5vw 80px}
+.ad-zone{background:var(--cream-dark);border:1px dashed rgba(15,39,68,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:12px;margin:24px 0}
+.ad-top{height:90px}
+.ad-mid{height:250px}
+.calc-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:32px;margin-bottom:24px;box-shadow:0 2px 20px rgba(15,39,68,0.04)}
+.sec-head{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;font-weight:500;color:var(--text);margin-bottom:6px}
+.field input,.field select{width:100%;padding:10px 14px;font-size:15px;border:1px solid var(--border);border-radius:8px;background:var(--white);color:var(--text);font-family:'Sarabun',sans-serif;transition:border-color .2s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,151,58,0.1)}
+.field-hint{font-size:11px;color:var(--text-muted);margin-top:4px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.calc-btn{width:100%;padding:14px;font-size:16px;font-weight:600;background:var(--navy);color:var(--white);border:none;border-radius:10px;cursor:pointer;font-family:'Sarabun',sans-serif;transition:all .2s;margin-top:8px}
+.calc-btn:hover{background:var(--navy-mid);transform:translateY(-1px)}
+.result-wrap{display:none}
+.result-wrap.show{display:block}
+.result-hero{background:var(--navy);border-radius:16px;padding:28px;margin-bottom:16px}
+.result-hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center}
+.rh-item{}
+.rh-label{font-size:11px;color:rgba(255,255,255,0.45);margin-bottom:4px;letter-spacing:0.04em;text-transform:uppercase}
+.rh-val{font-size:28px;font-weight:600;font-family:'Playfair Display',serif;line-height:1.1}
+.rh-unit{font-size:12px;color:rgba(255,255,255,0.4);margin-top:2px}
+.rh-main{color:var(--gold-light)}
+.rh-danger{color:#ff8a8a}
+.rh-muted{color:rgba(255,255,255,0.7)}
+.result-sub{text-align:center;font-size:12px;color:rgba(255,255,255,0.3);margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.08)}
+
+.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
+.sum-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center}
+.sum-val{font-size:17px;font-weight:600;color:var(--navy);margin-bottom:3px}
+.sum-label{font-size:11px;color:var(--text-muted)}
+.sum-card.highlight .sum-val{color:var(--danger)}
+
+.bar-wrap{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:16px}
+.bar-title{font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:14px;text-transform:uppercase;letter-spacing:0.05em}
+.donut-row{display:flex;align-items:center;gap:24px}
+.donut-canvas{width:120px;height:120px;flex-shrink:0}
+.donut-legend{flex:1}
+.legend-item{display:flex;align-items:center;gap:8px;margin-bottom:8px;font-size:13px}
+.legend-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+.ld-principal{background:#185FA5}
+.ld-interest{background:#E24B4A}
+
+.table-wrap{background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:16px}
+.table-head{display:grid;grid-template-columns:60px 1fr 1fr 1fr 1fr;padding:10px 14px;background:var(--cream-dark);font-size:11px;font-weight:600;color:var(--text-muted);letter-spacing:0.04em;gap:8px}
+.table-row{display:grid;grid-template-columns:60px 1fr 1fr 1fr 1fr;padding:10px 14px;border-top:1px solid var(--border);font-size:13px;gap:8px;align-items:center}
+.table-row:nth-child(even){background:rgba(250,247,242,0.5)}
+.table-row .yr{font-weight:600;color:var(--navy)}
+.table-row .int{color:var(--danger)}
+.table-row .bal{color:var(--text-muted);font-size:12px}
+.show-more-btn{width:100%;padding:12px;font-size:13px;border:none;border-top:1px solid var(--border);background:var(--cream-dark);color:var(--text-muted);cursor:pointer;font-family:'Sarabun',sans-serif;transition:background .15s}
+.show-more-btn:hover{background:var(--cream)}
+
+.extra-pay-card{background:var(--cream-dark);border-radius:10px;padding:20px;margin-bottom:16px;border:1px solid var(--border)}
+.extra-title{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.extra-sub{font-size:12px;color:var(--text-muted);margin-bottom:14px}
+.extra-result{background:var(--white);border-radius:8px;padding:14px;margin-top:12px;display:none}
+.extra-result.show{display:block}
+.extra-row{display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid var(--border)}
+.extra-row:last-child{border-bottom:none;font-weight:600;color:var(--success)}
+
+.info-box{border-left:3px solid var(--info);border-radius:0 10px 10px 0;background:rgba(12,68,124,0.06);padding:12px 16px;font-size:13px;color:var(--info);line-height:1.6;margin-bottom:16px}
+.success-box{border-left:3px solid var(--success);border-radius:0 10px 10px 0;background:rgba(26,107,60,0.06);padding:12px 16px;font-size:13px;color:var(--success);line-height:1.6;margin-bottom:16px}
+.action-row{display:flex;gap:10px;margin-top:8px}
+.action-btn{flex:1;padding:10px;font-size:13px;border:1px solid var(--border);border-radius:8px;background:var(--white);color:var(--text-muted);cursor:pointer;font-family:'Sarabun',sans-serif;display:flex;align-items:center;justify-content:center;gap:6px;transition:all .15s}
+.action-btn:hover{background:var(--cream-dark)}
+
+.faq-section{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:24px}
+.faq-section h2{font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:20px}
+.faq-item{border-bottom:1px solid var(--border);padding:4px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{padding:14px 0;font-size:14px;font-weight:500;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-q::after{content:'+';font-size:20px;color:var(--gold);flex-shrink:0;transition:transform .2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:all .3s;font-size:13px;color:var(--text-muted);line-height:1.8}
+.faq-item.open .faq-a{max-height:400px;padding-bottom:14px}
+.disclaimer{background:var(--cream-dark);border-radius:10px;padding:16px 20px;font-size:12px;color:var(--text-muted);line-height:1.7;margin-bottom:24px}
+footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:32px 5vw}
+.footer-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:'Playfair Display',serif;color:var(--gold);font-size:16px}
+.footer-links{display:flex;gap:20px}
+.footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:12px}
+.footer-links a:hover{color:var(--gold-light)}
+.footer-note{font-size:11px;color:rgba(255,255,255,0.2);width:100%;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.06)}
+@media(max-width:640px){
+  .row2,.row3,.result-hero-grid,.summary-grid{grid-template-columns:1fr}
+  .table-head,.table-row{grid-template-columns:40px 1fr 1fr 1fr;font-size:11px}
+  .table-head span:nth-child(5),.table-row span:nth-child(5){display:none}
+  .action-row{flex-direction:column}
+  .donut-row{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">WorkerThai<span>รู้สิทธิ์ก่อน ตัดสินใจได้เอง</span></a>
+    <a href="/" class="nav-back">← กลับหน้าหลัก</a>
+  </div>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-badge">🏠 อัพเดทอัตราดอกเบี้ย 2567</div>
+  <h1>คำนวณผ่อนบ้าน</h1>
+  <p>ค่างวดรายเดือน ดอกเบี้ยรวมทั้งสัญญา ตารางผ่อนรายปี และผลลัพธ์เมื่อโปะเพิ่ม</p>
+</div>
+<div class="main-wrap">
+  <div class="ad-zone ad-top">โฆษณา — Google AdSense 728×90</div>
+  <div class="calc-card">
+    <div class="sec-head">🏠 ข้อมูลสินเชื่อ</div>
+    <div class="row2">
+      <div class="field">
+        <label for="loanAmt">วงเงินกู้ (บาท)</label>
+        <input type="number" id="loanAmt" placeholder="เช่น 3000000" min="0" oninput="autoCalc()">
+      </div>
+      <div class="field">
+        <label for="downPct">เงินดาวน์ (%)</label>
+        <input type="number" id="downPct" placeholder="เช่น 10" min="0" max="100" step="0.5" value="0" oninput="autoCalc()">
+        <div class="field-hint">ถ้ากรอกวงเงินกู้สุทธิแล้วใส่ 0</div>
+      </div>
+    </div>
+    <div class="row3">
+      <div class="field">
+        <label for="rate1">ดอกเบี้ยปีที่ 1–3 (%/ปี)</label>
+        <input type="number" id="rate1" placeholder="เช่น 3.5" min="0" max="30" step="0.1" oninput="autoCalc()">
+        <div class="field-hint">อัตราพิเศษ (Promo rate)</div>
+      </div>
+      <div class="field">
+        <label for="rate2">ดอกเบี้ยปีที่ 4+ (%/ปี)</label>
+        <input type="number" id="rate2" placeholder="เช่น 6.5" min="0" max="30" step="0.1" oninput="autoCalc()">
+        <div class="field-hint">อัตราปกติ (MRR-based)</div>
+      </div>
+      <div class="field">
+        <label for="termYr">ระยะเวลาผ่อน (ปี)</label>
+        <input type="number" id="termYr" placeholder="เช่น 30" min="1" max="40" oninput="autoCalc()">
+      </div>
+    </div>
+    <div class="sec-head" style="margin-top:4px">💰 โปะเพิ่ม (ไม่บังคับ)</div>
+    <div class="row2">
+      <div class="field">
+        <label for="extraMonthly">โปะเพิ่มรายเดือน (บาท)</label>
+        <input type="number" id="extraMonthly" placeholder="เช่น 2000" min="0" oninput="autoCalc()">
+      </div>
+      <div class="field">
+        <label for="extraYearly">โปะเพิ่มรายปี / โบนัส (บาท)</label>
+        <input type="number" id="extraYearly" placeholder="เช่น 30000" min="0" oninput="autoCalc()">
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calculate()">🏠 คำนวณผ่อนบ้าน</button>
+  </div>
+
+  <div class="result-wrap" id="resultWrap">
+    <div class="result-hero">
+      <div class="result-hero-grid">
+        <div class="rh-item">
+          <div class="rh-label">ค่างวด/เดือน (ปีแรก)</div>
+          <div class="rh-val rh-main" id="resInstall">0</div>
+          <div class="rh-unit">บาท</div>
+        </div>
+        <div class="rh-item">
+          <div class="rh-label">ดอกเบี้ยรวมทั้งหมด</div>
+          <div class="rh-val rh-danger" id="resInterest">0</div>
+          <div class="rh-unit">บาท</div>
+        </div>
+        <div class="rh-item">
+          <div class="rh-label">จ่ายทั้งหมด</div>
+          <div class="rh-val rh-muted" id="resTotal">0</div>
+          <div class="rh-unit">บาท</div>
+        </div>
+      </div>
+      <div class="result-sub" id="resSub"></div>
+    </div>
+
+    <div class="summary-grid" id="sumGrid"></div>
+
+    <div class="bar-wrap">
+      <div class="bar-title">สัดส่วนเงินต้น vs ดอกเบี้ย</div>
+      <div class="donut-row">
+        <canvas class="donut-canvas" id="donutCanvas" width="120" height="120"></canvas>
+        <div class="donut-legend" id="donutLegend"></div>
+      </div>
+    </div>
+
+    <div id="extraResult"></div>
+    <div id="resInfo"></div>
+
+    <div class="table-wrap">
+      <div class="table-head">
+        <span>ปีที่</span><span>ค่างวด/เดือน</span><span>ดอกเบี้ย/ปี</span><span>เงินต้น/ปี</span><span>เหลือค้างชำระ</span>
+      </div>
+      <div id="amortTable"></div>
+      <button class="show-more-btn" id="showMoreBtn" onclick="showAllRows()" style="display:none">แสดงทุกปี ▼</button>
+    </div>
+
+    <div class="action-row">
+      <button class="action-btn" onclick="copyResult()">📋 คัดลอกผล</button>
+      <button class="action-btn" onclick="window.print()">🖨️ พิมพ์/PDF</button>
+      <button class="action-btn" onclick="resetCalc()">🔄 คำนวณใหม่</button>
+    </div>
+    <div class="ad-zone ad-mid" style="margin-top:24px">โฆษณา — Google AdSense 300×250</div>
+  </div>
+
+  <div class="faq-section">
+    <h2>คำถามที่พบบ่อย</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">MRR คืออะไร และมีผลกับค่างวดอย่างไร?</div>
+      <div class="faq-a">MRR (Minimum Retail Rate) คืออัตราดอกเบี้ยขั้นต่ำที่ธนาคารให้กับลูกค้ารายย่อยชั้นดี ธนาคารมักกำหนดดอกเบี้ยบ้านเป็น MRR-x% เช่น MRR-1% ดังนั้นเมื่อธนาคารแห่งประเทศไทยขึ้นหรือลดอัตราดอกเบี้ย MRR ก็มักปรับตาม และส่งผลต่อค่างวดของคุณด้วย</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">โปะบ้านช่วยประหยัดได้มากแค่ไหน?</div>
+      <div class="faq-a">การโปะเงินต้นพิเศษช่วยลดยอดหนี้คงเหลือ ทำให้ดอกเบี้ยที่คำนวณต่อไปลดลงอย่างมาก โดยเฉพาะในช่วงปีแรกๆ ที่ดอกเบี้ยสูง ตัวอย่าง: กู้ 3 ล้าน 30 ปี โปะเดือนละ 2,000 บาท อาจลดดอกเบี้ยรวมได้กว่า 500,000 บาทและผ่อนหมดเร็วขึ้น 3–5 ปี</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">ค่างวดควรอยู่ที่เท่าไหร่ของรายได้?</div>
+      <div class="faq-a">ธนาคารโดยทั่วไปพิจารณาอนุมัติสินเชื่อเมื่อค่างวดรวมทุกสินเชื่อไม่เกิน 40-50% ของรายได้รวม แต่เพื่อความปลอดภัยทางการเงิน ควรให้ค่างวดบ้านอยู่ที่ไม่เกิน 30% ของรายได้สุทธิ เพื่อให้มีเงินเหลือสำหรับค่าใช้จ่ายอื่นและเงินออม</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">รีไฟแนนซ์คุ้มเมื่อไหร่?</div>
+      <div class="faq-a">รีไฟแนนซ์คุ้มเมื่อ (1) อัตราดอกเบี้ยใหม่ต่ำกว่าเดิมอย่างน้อย 0.5-1% ขึ้นไป (2) เงินต้นคงเหลือยังสูงพอที่จะประหยัดดอกเบี้ยได้มากกว่าค่าธรรมเนียมรีไฟแนนซ์ (3) ยังผ่อนเหลืออีกนานพอ โดยทั่วไปหากผ่อนมาแล้วเกินครึ่งสัญญา การรีไฟแนนซ์อาจไม่คุ้มแล้ว</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">ดอกเบี้ยบ้านนำมาลดหย่อนภาษีได้ไหม?</div>
+      <div class="faq-a">ได้ครับ ดอกเบี้ยเงินกู้เพื่อซื้อ/สร้างที่อยู่อาศัย ลดหย่อนภาษีได้ตามจริงสูงสุด 100,000 บาท/ปี เฉพาะบ้านหลังที่อยู่อาศัย ต้องได้รับหนังสือรับรองดอกเบี้ยจากธนาคารทุกปี</div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <strong>ข้อควรทราบ:</strong> การคำนวณนี้ใช้อัตราดอกเบี้ยคงที่ตามที่กรอก ดอกเบี้ยจริงอาจเปลี่ยนแปลงตาม MRR ของธนาคาร ควรสอบถามอัตราที่แน่นอนจากธนาคารก่อนตัดสินใจ
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="footer-logo">WorkerThai</a>
+    <div class="footer-links">
+      <a href="/">หน้าหลัก</a>
+      <a href="netsalary.html">เงินเดือนสุทธิ</a>
+      <a href="transfer.html">ค่าโอนที่ดิน</a>
+      <a href="taxdeduction.html">ลดหย่อนภาษี</a>
+      <a href="mailto:contact@workerthai.com">ติดต่อ</a>
+    </div>
+    <div class="footer-note">WorkerThai เป็นเครื่องมือช่วยประมาณการ ไม่ใช่คำปรึกษาทางการเงิน | © 2567 WorkerThai</div>
+  </div>
+</footer>
+
+<script>
+function fmt(n){return Math.round(n).toLocaleString('th-TH');}
+function fmtD(n){return parseFloat(n.toFixed(1)).toLocaleString('th-TH');}
+
+let allRows=[];
+let showAll=false;
+
+function calcInstallment(principal,annualRate,months){
+  if(annualRate===0)return principal/months;
+  const r=annualRate/12/100;
+  return principal*r*Math.pow(1+r,months)/(Math.pow(1+r,months)-1);
+}
+
+function buildAmortization(principal,rate1,rate2,termYr,extraMonthly,extraYearly){
+  const months=termYr*12;
+  const r1=rate1/12/100;
+  const r2=rate2/12/100;
+  const inst1=calcInstallment(principal,rate1,months);
+  const inst2=calcInstallment(principal,rate2,months);
+  let balance=principal;
+  const yearly=[];
+  let totalInt=0,totalPrincipal=0,actualMonths=0;
+  for(let yr=1;yr<=termYr;yr++){
+    let yrInt=0,yrPrin=0,yrInstall=0;
+    const rate=yr<=3?r1:r2;
+    const inst=yr<=3?inst1:inst2;
+    for(let mo=1;mo<=12;mo++){
+      if(balance<=0)break;
+      const interest=balance*rate;
+      let payment=Math.min(inst,balance+interest);
+      let principal_paid=payment-interest;
+      const extra=extraMonthly+(mo===12?extraYearly:0);
+      const extraActual=Math.min(extra,balance-principal_paid);
+      principal_paid+=Math.max(0,extraActual);
+      payment+=Math.max(0,extraActual);
+      balance-=principal_paid;
+      if(balance<0)balance=0;
+      yrInt+=interest;
+      yrPrin+=principal_paid;
+      yrInstall=payment;
+      totalInt+=interest;
+      totalPrincipal+=principal_paid;
+      actualMonths++;
+    }
+    yearly.push({yr,install:yrInstall,interest:yrInt,principal:yrPrin,balance:Math.max(0,balance)});
+    if(balance<=0)break;
+  }
+  return{yearly,totalInt,totalPrincipal,actualMonths};
+}
+
+function calculate(){
+  let loanAmt=parseFloat(document.getElementById('loanAmt').value)||0;
+  const downPct=parseFloat(document.getElementById('downPct').value)||0;
+  const rate1=parseFloat(document.getElementById('rate1').value)||0;
+  const rate2=parseFloat(document.getElementById('rate2').value)||rate1;
+  const termYr=parseInt(document.getElementById('termYr').value)||0;
+  const extraMonthly=parseFloat(document.getElementById('extraMonthly').value)||0;
+  const extraYearly=parseFloat(document.getElementById('extraYearly').value)||0;
+
+  if(!loanAmt||!rate1||!termYr){alert('กรุณากรอกวงเงิน อัตราดอกเบี้ย และระยะเวลา');return;}
+
+  const principal=loanAmt*(1-downPct/100);
+  const inst1=calcInstallment(principal,rate1,termYr*12);
+  const inst2=calcInstallment(principal,rate2,termYr*12);
+
+  const {yearly,totalInt,totalPrincipal,actualMonths}=buildAmortization(principal,rate1,rate2,termYr,extraMonthly,extraYearly);
+  const totalPaid=totalInt+totalPrincipal;
+  const intRatio=(totalInt/totalPaid*100);
+
+  document.getElementById('resInstall').textContent=fmt(inst1);
+  document.getElementById('resInterest').textContent=fmt(totalInt);
+  document.getElementById('resTotal').textContent=fmt(totalPaid);
+  document.getElementById('resSub').textContent=
+    `วงเงินกู้จริง ${fmt(principal)} บาท · ผ่อน ${Math.ceil(actualMonths/12)} ปี ${actualMonths%12} เดือน · ดอกเบี้ยเฉลี่ย ${fmtD(totalInt/actualMonths)} บาท/เดือน`;
+
+  document.getElementById('sumGrid').innerHTML=`
+    <div class="sum-card"><div class="sum-val">${fmt(principal)}</div><div class="sum-label">วงเงินกู้จริง</div></div>
+    <div class="sum-card highlight"><div class="sum-val">${fmt(totalInt)}</div><div class="sum-label">ดอกเบี้ยรวม</div></div>
+    <div class="sum-card"><div class="sum-val">${fmtD(intRatio)}%</div><div class="sum-label">สัดส่วนดอกเบี้ย</div></div>
+    <div class="sum-card"><div class="sum-val">${Math.ceil(actualMonths/12)} ปี</div><div class="sum-label">ระยะเวลาจริง</div></div>
+  `;
+
+  // Donut chart
+  drawDonut(principal,totalInt);
+  document.getElementById('donutLegend').innerHTML=`
+    <div class="legend-item"><div class="legend-dot ld-principal"></div><span>เงินต้น ${fmt(principal)} บาท (${fmtD(100-intRatio)}%)</span></div>
+    <div class="legend-item"><div class="legend-dot ld-interest"></div><span>ดอกเบี้ยรวม ${fmt(totalInt)} บาท (${fmtD(intRatio)}%)</span></div>
+  `;
+
+  // Extra pay comparison
+  if(extraMonthly>0||extraYearly>0){
+    const {yearly:y0,totalInt:ti0,actualMonths:am0}=buildAmortization(principal,rate1,rate2,termYr,0,0);
+    const saved=ti0-totalInt;
+    const savedMonths=am0-actualMonths;
+    document.getElementById('extraResult').innerHTML=`
+      <div class="success-box">
+        ✅ การโปะเพิ่ม${extraMonthly>0?` เดือนละ ${fmt(extraMonthly)} บาท`:''}${extraYearly>0?` + ปีละ ${fmt(extraYearly)} บาท`:''}
+        ช่วยประหยัดดอกเบี้ยได้ <strong>${fmt(saved)} บาท</strong>
+        และผ่อนหมดเร็วขึ้น <strong>${Math.floor(savedMonths/12)} ปี ${savedMonths%12} เดือน</strong>
+      </div>
+    `;
+  } else {
+    document.getElementById('extraResult').innerHTML='';
+  }
+
+  // Info
+  const monthlyIncomeSuggested=inst1/0.3;
+  document.getElementById('resInfo').innerHTML=`
+    <div class="info-box">💡 ค่างวด ${fmt(inst1)} บาท/เดือน — ควรมีรายได้อย่างน้อย <strong>${fmt(monthlyIncomeSuggested)} บาท/เดือน</strong> (rule of thumb: ค่างวดไม่เกิน 30% ของรายได้)</div>
+  `;
+
+  // Amort table
+  allRows=yearly;
+  renderTable(false);
+  document.getElementById('resultWrap').classList.add('show');
+  document.getElementById('resultWrap').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function renderTable(all){
+  const rows=all?allRows:allRows.slice(0,10);
+  document.getElementById('amortTable').innerHTML=rows.map(r=>`
+    <div class="table-row">
+      <span class="yr">${r.yr}</span>
+      <span>${fmt(r.install)}</span>
+      <span class="int">${fmt(r.interest)}</span>
+      <span>${fmt(r.principal)}</span>
+      <span class="bal">${fmt(r.balance)}</span>
+    </div>
+  `).join('');
+  const btn=document.getElementById('showMoreBtn');
+  if(allRows.length>10&&!all){btn.style.display='block';btn.textContent=`แสดงทั้งหมด ${allRows.length} ปี ▼`;}
+  else{btn.style.display='none';}
+}
+
+function showAllRows(){renderTable(true);}
+
+function drawDonut(principal,interest){
+  const canvas=document.getElementById('donutCanvas');
+  const ctx=canvas.getContext('2d');
+  const total=principal+interest;
+  const cx=60,cy=60,r=50,lineWidth=16;
+  ctx.clearRect(0,0,120,120);
+  const pAngle=principal/total*Math.PI*2;
+  ctx.beginPath();ctx.arc(cx,cy,r,-Math.PI/2,-Math.PI/2+pAngle);
+  ctx.strokeStyle='#185FA5';ctx.lineWidth=lineWidth;ctx.lineCap='butt';ctx.stroke();
+  ctx.beginPath();ctx.arc(cx,cy,r,-Math.PI/2+pAngle,-Math.PI/2+Math.PI*2);
+  ctx.strokeStyle='#E24B4A';ctx.lineWidth=lineWidth;ctx.stroke();
+}
+
+function autoCalc(){
+  if(document.getElementById('resultWrap').classList.contains('show'))calculate();
+}
+
+function copyResult(){
+  const inst=document.getElementById('resInstall').textContent;
+  const int=document.getElementById('resInterest').textContent;
+  navigator.clipboard.writeText(`ค่างวด: ${inst} บาท/เดือน\nดอกเบี้ยรวม: ${int} บาท\nคำนวณโดย WorkerThai.com`)
+    .then(()=>alert('คัดลอกแล้ว!')).catch(()=>{});
+}
+
+function resetCalc(){
+  document.getElementById('resultWrap').classList.remove('show');
+  ['loanAmt','rate1','rate2','termYr','extraMonthly','extraYearly'].forEach(id=>{
+    document.getElementById(id).value='';
+  });
+  document.getElementById('downPct').value='0';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function toggleFaq(el){
+  const item=el.parentElement;
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
+}
+</script>
+</body>
+</html>
