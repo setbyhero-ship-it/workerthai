@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WorkerThai — รู้สิทธิ์ก่อน ตัดสินใจได้เอง</title>
+<meta name="description" content="เครื่องมือคำนวณสิทธิ์แรงงานไทยฟรี คำนวณเงินชดเชย ค่าล่วงเวลา OT ค่าโอนที่ดิน ถูกต้องตามกฎหมาย ไม่มีผลประโยชน์ทับซ้อน">
+<meta name="keywords" content="คำนวณเงินชดเชย,สิทธิ์แรงงาน,กฎหมายแรงงาน,คำนวณ OT,ค่าล่วงเวลา,พ.ร.บ.คุ้มครองแรงงาน">
+<meta property="og:title" content="WorkerThai — รู้สิทธิ์ก่อน ตัดสินใจได้เอง">
+<meta property="og:description" content="เครื่องมือคำนวณสิทธิ์แรงงานไทยฟรี ถูกต้องตามกฎหมาย ไม่มีผลประโยชน์ทับซ้อน">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://workerthai.com">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://workerthai.com">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "WorkerThai",
+  "url": "https://workerthai.com",
+  "description": "เครื่องมือคำนวณสิทธิ์แรงงานไทยฟรี ถูกต้องตามกฎหมาย",
+  "inLanguage": "th"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0f2744;
+    --navy-mid: #1a3a5c;
+    --gold: #c8973a;
+    --gold-light: #e8b86d;
+    --cream: #faf7f2;
+    --cream-dark: #f0ebe0;
+    --text: #1a1a2e;
+    --text-muted: #5a5a6e;
+    --white: #ffffff;
+    --success: #1a6b3c;
+    --border: rgba(15,39,68,0.1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Sarabun',sans-serif;background:var(--cream);color:var(--text);line-height:1.7;overflow-x:hidden}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(15,39,68,0.97);backdrop-filter:blur(12px);padding:0 5vw}
+  .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+  .nav-logo{font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);text-decoration:none;letter-spacing:0.02em}
+  .nav-logo span{color:var(--white);font-family:'Sarabun',sans-serif;font-weight:300;font-size:13px;display:block;letter-spacing:0.1em;margin-top:-4px}
+  .nav-links{display:flex;gap:28px;list-style:none}
+  .nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:14px;font-weight:400;transition:color .2s}
+  .nav-links a:hover{color:var(--gold-light)}
+
+  /* HERO */
+  .hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;padding:80px 5vw 60px;position:relative;overflow:hidden}
+  .hero::before{content:'';position:absolute;top:-100px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(200,151,58,0.08) 0%,transparent 70%);pointer-events:none}
+  .hero::after{content:'';position:absolute;bottom:-150px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(200,151,58,0.05) 0%,transparent 70%);pointer-events:none}
+  .hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(200,151,58,0.12);border:1px solid rgba(200,151,58,0.3);color:var(--gold-light);font-size:12px;padding:6px 14px;border-radius:20px;margin-bottom:24px;letter-spacing:0.05em}
+  .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+  .hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,4vw,56px);color:var(--white);line-height:1.2;margin-bottom:20px}
+  .hero h1 em{color:var(--gold);font-style:normal}
+  .hero-sub{font-size:17px;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:36px;font-weight:300}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .btn-primary{background:var(--gold);color:var(--navy);padding:14px 28px;border-radius:6px;text-decoration:none;font-weight:600;font-size:15px;transition:all .2s;display:inline-block}
+  .btn-primary:hover{background:var(--gold-light);transform:translateY(-1px)}
+  .btn-ghost{border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.8);padding:14px 28px;border-radius:6px;text-decoration:none;font-size:15px;transition:all .2s;display:inline-block}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-light)}
+  .hero-stat-row{display:flex;gap:32px;margin-top:48px}
+  .hero-stat{border-left:2px solid rgba(200,151,58,0.4);padding-left:16px}
+  .hero-stat-num{font-size:24px;font-weight:600;color:var(--gold-light)}
+  .hero-stat-label{font-size:12px;color:rgba(255,255,255,0.45);margin-top:2px}
+
+  /* HERO RIGHT — tool preview */
+  .hero-card{background:rgba(255,255,255,0.04);border:1px solid rgba(200,151,58,0.15);border-radius:12px;padding:28px;backdrop-filter:blur(8px)}
+  .hero-card-title{font-size:13px;color:var(--gold);letter-spacing:0.08em;margin-bottom:20px;text-transform:uppercase}
+  .tool-list{display:flex;flex-direction:column;gap:12px}
+  .tool-item{display:flex;align-items:center;gap:14px;padding:14px 16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;text-decoration:none;transition:all .2s;cursor:pointer}
+  .tool-item:hover{background:rgba(200,151,58,0.08);border-color:rgba(200,151,58,0.25);transform:translateX(4px)}
+  .tool-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+  .ti-navy{background:rgba(200,151,58,0.15)}
+  .tool-info{}
+  .tool-name{font-size:14px;font-weight:500;color:var(--white)}
+  .tool-desc{font-size:12px;color:rgba(255,255,255,0.4);margin-top:2px}
+  .tool-arrow{margin-left:auto;color:rgba(200,151,58,0.5);font-size:18px}
+
+  /* TRUST BAR */
+  .trust-bar{background:var(--cream-dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 5vw}
+  .trust-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
+  .trust-item{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text-muted)}
+  .trust-dot{width:8px;height:8px;border-radius:50%;background:var(--success)}
+
+  /* TOOLS SECTION */
+  .section{padding:80px 5vw}
+  .section-inner{max-width:1100px;margin:0 auto}
+  .section-label{font-size:12px;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
+  .section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,40px);color:var(--navy);margin-bottom:12px}
+  .section-sub{font-size:16px;color:var(--text-muted);max-width:560px;line-height:1.7}
+  .tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+  .tool-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:28px;transition:all .25s;text-decoration:none;display:block;position:relative;overflow:hidden}
+  .tool-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+  .tool-card:hover{border-color:rgba(200,151,58,0.3);transform:translateY(-3px);box-shadow:0 12px 40px rgba(15,39,68,0.08)}
+  .tool-card:hover::before{transform:scaleX(1)}
+  .tool-card-icon{font-size:28px;margin-bottom:16px}
+  .tool-card-stars{display:flex;gap:2px;margin-bottom:12px}
+  .star{width:12px;height:12px;background:var(--gold);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+  .star.empty{background:var(--cream-dark)}
+  .tool-card h3{font-size:17px;font-weight:600;color:var(--navy);margin-bottom:8px}
+  .tool-card p{font-size:13px;color:var(--text-muted);line-height:1.6;margin-bottom:16px}
+  .tool-card-law{font-size:11px;color:var(--gold);background:rgba(200,151,58,0.08);padding:4px 10px;border-radius:12px;display:inline-block}
+  .tool-card-badge{position:absolute;top:16px;right:16px;font-size:10px;padding:3px 10px;border-radius:10px;background:rgba(26,107,60,0.1);color:var(--success);font-weight:500}
+
+  /* HOW IT WORKS */
+  .how-section{background:var(--navy);padding:80px 5vw}
+  .how-inner{max-width:1100px;margin:0 auto}
+  .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:48px}
+  .how-item{text-align:center}
+  .how-num{font-family:'Playfair Display',serif;font-size:48px;color:rgba(200,151,58,0.2);line-height:1;margin-bottom:16px}
+  .how-title{font-size:16px;font-weight:600;color:var(--white);margin-bottom:8px}
+  .how-desc{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.7}
+
+  /* FAQ */
+  .faq-section{padding:80px 5vw;background:var(--cream)}
+  .faq-inner{max-width:800px;margin:0 auto}
+  .faq-list{margin-top:40px;display:flex;flex-direction:column;gap:2px}
+  .faq-item{background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+  .faq-q{padding:18px 20px;font-size:15px;font-weight:500;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+  .faq-q::after{content:'+';font-size:20px;color:var(--gold);font-weight:300;transition:transform .2s}
+  .faq-item.open .faq-q::after{transform:rotate(45deg)}
+  .faq-a{padding:0 20px;max-height:0;overflow:hidden;transition:all .3s;font-size:14px;color:var(--text-muted);line-height:1.8}
+  .faq-item.open .faq-a{max-height:300px;padding:0 20px 18px}
+
+  /* AD ZONES */
+  .ad-zone{background:var(--cream-dark);border:1px dashed rgba(15,39,68,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:12px}
+  .ad-top{height:90px;margin:80px 5vw 0;max-width:1100px;margin-left:auto;margin-right:auto}
+  .ad-mid{height:250px;margin:40px 0}
+
+  /* FOOTER */
+  footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:40px 5vw;margin-top:0}
+  .footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+  .footer-logo{font-family:'Playfair Display',serif;color:var(--gold);font-size:18px}
+  .footer-links{display:flex;gap:24px}
+  .footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:13px;transition:color .2s}
+  .footer-links a:hover{color:var(--gold-light)}
+  .footer-note{font-size:12px;color:rgba(255,255,255,0.25);width:100%;margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06)}
+
+  /* ANIMATIONS */
+  .fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+  .fade-up.visible{opacity:1;transform:none}
+
+  @media(max-width:768px){
+    .hero-inner{grid-template-columns:1fr;gap:40px}
+    .tools-grid{grid-template-columns:1fr}
+    .how-grid{grid-template-columns:1fr;gap:28px}
+    .nav-links{display:none}
+    .hero-stat-row{gap:20px}
+    .trust-inner{gap:24px}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">WorkerThai<span>รู้สิทธิ์ก่อน ตัดสินใจได้เอง</span></a>
+    <ul class="nav-links">
+      <li><a href="#tools">เครื่องมือ</a></li>
+      <li><a href="#faq">คำถามที่พบบ่อย</a></li>
+      <li><a href="mailto:contact@workerthai.com">ติดต่อ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">อัพเดทตามกฎหมายล่าสุด 2567</div>
+      <h1>รู้<em>สิทธิ์</em>ก่อน<br>ตัดสินใจได้เอง</h1>
+      <p class="hero-sub">เครื่องมือคำนวณสิทธิ์แรงงานไทยฟรี ไม่มีผลประโยชน์ทับซ้อน<br>ถูกต้องตาม พ.ร.บ. คุ้มครองแรงงาน — ใช้งานได้ทันที</p>
+      <div class="hero-cta">
+        <a href="#tools" class="btn-primary">เริ่มคำนวณฟรี</a>
+        <a href="#how" class="btn-ghost">วิธีใช้งาน</a>
+      </div>
+      <div class="hero-stat-row">
+        <div class="hero-stat">
+          <div class="hero-stat-num">ฟรี 100%</div>
+          <div class="hero-stat-label">ไม่มีค่าใช้จ่าย</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">3 tool</div>
+          <div class="hero-stat-label">เครื่องมือหลัก</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">2567</div>
+          <div class="hero-stat-label">อัพเดทล่าสุด</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="hero-card">
+        <div class="hero-card-title">เครื่องมือที่มีให้ใช้</div>
+        <div class="tool-list">
+          <a href="severance.html" class="tool-item">
+            <div class="tool-icon ti-navy">💰</div>
+            <div class="tool-info">
+              <div class="tool-name">เงินชดเชยลูกจ้าง</div>
+              <div class="tool-desc">มาตรา 118 — เลิกจ้าง/เกษียณ/ปิดกิจการ</div>
+            </div>
+            <div class="tool-arrow">›</div>
+          </a>
+          <a href="ot.html" class="tool-item">
+            <div class="tool-icon ti-navy">⏰</div>
+            <div class="tool-info">
+              <div class="tool-name">ค่าล่วงเวลา OT</div>
+              <div class="tool-desc">มาตรา 61 — คำนวณ OT วันธรรมดา/หยุด</div>
+            </div>
+            <div class="tool-arrow">›</div>
+          </a>
+          <a href="transfer.html" class="tool-item">
+            <div class="tool-icon ti-navy">🏠</div>
+            <div class="tool-info">
+              <div class="tool-name">ค่าโอนที่ดิน/บ้าน</div>
+              <div class="tool-desc">คำนวณค่าธรรมเนียม ค่าอากร ภาษีธุรกิจเฉพาะ</div>
+            </div>
+            <div class="tool-arrow">›</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><div class="trust-dot"></div>ถูกต้องตาม พ.ร.บ. คุ้มครองแรงงาน 2541 (แก้ไข 2567)</div>
+    <div class="trust-item"><div class="trust-dot"></div>ไม่มีผลประโยชน์ทับซ้อน ไม่รับเงินนายจ้าง</div>
+    <div class="trust-item"><div class="trust-dot"></div>ไม่เก็บข้อมูลส่วนตัว ใช้ได้เลยไม่ต้อง login</div>
+  </div>
+</div>
+
+<!-- AD TOP -->
+<div style="padding:24px 5vw 0;max-width:1180px;margin:0 auto">
+  <div class="ad-zone ad-top">โฆษณา — Google AdSense 728×90</div>
+</div>
+
+<!-- TOOLS SECTION -->
+<section class="section" id="tools">
+  <div class="section-inner">
+    <div class="section-label">เครื่องมือฟรี</div>
+    <h2 class="section-title fade-up">คำนวณสิทธิ์ได้ทันที</h2>
+    <p class="section-sub fade-up">ทุก tool คำนวณตามกฎหมายจริง อัพเดทต่อเนื่อง ไม่มีค่าใช้จ่าย</p>
+    <div class="tools-grid">
+
+      <a href="severance.html" class="tool-card fade-up">
+        <div class="tool-card-badge">พร้อมใช้งาน</div>
+        <div class="tool-card-icon">💰</div>
+        <div class="tool-card-stars">
+          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+        </div>
+        <h3>คำนวณเงินชดเชยลูกจ้าง</h3>
+        <p>รองรับทุกกรณี — นายจ้างเลิกจ้าง, ลาออก, เกษียณ, ปิดกิจการ คำนวณตาม 6 tier อายุงาน รวมการยกเว้นภาษี</p>
+        <div class="tool-card-law">มาตรา 118 — แก้ไขล่าสุด 2562</div>
+      </a>
+
+      <a href="ot.html" class="tool-card fade-up">
+        <div class="tool-card-badge">เร็วๆ นี้</div>
+        <div class="tool-card-icon">⏰</div>
+        <div class="tool-card-stars">
+          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star empty"></div>
+        </div>
+        <h3>คำนวณค่าล่วงเวลา OT</h3>
+        <p>คำนวณ OT วันธรรมดา วันหยุด และวันหยุดนักขัตฤกษ์ ตามอัตราที่กฎหมายกำหนด 1.5x, 2x, 3x</p>
+        <div class="tool-card-law">มาตรา 61–65</div>
+      </a>
+
+      <a href="transfer.html" class="tool-card fade-up">
+        <div class="tool-card-badge">เร็วๆ นี้</div>
+        <div class="tool-card-icon">🏠</div>
+        <div class="tool-card-stars">
+          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star empty"></div>
+        </div>
+        <h3>คำนวณค่าโอนที่ดิน/บ้าน</h3>
+        <p>ค่าธรรมเนียมโอน ค่าอากรแสตมป์ ภาษีธุรกิจเฉพาะ และภาษีเงินได้หัก ณ ที่จ่าย คำนวณครบในที่เดียว</p>
+        <div class="tool-card-law">ประมวลรัษฎากร + กรมที่ดิน</div>
+      </a>
+
+    </div>
+    <div class="ad-zone ad-mid">โฆษณา — Google AdSense 300×250 (Mid Content)</div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="how-inner">
+    <div class="section-label" style="color:var(--gold)">วิธีใช้งาน</div>
+    <h2 class="section-title fade-up" style="color:var(--white)">ง่าย ใช้ได้ทันที</h2>
+    <div class="how-grid">
+      <div class="how-item fade-up">
+        <div class="how-num">01</div>
+        <div class="how-title">เลือก tool ที่ต้องการ</div>
+        <div class="how-desc">เลือกจาก 3 เครื่องมือหลัก ตามสถานการณ์ที่คุณเจออยู่</div>
+      </div>
+      <div class="how-item fade-up">
+        <div class="how-num">02</div>
+        <div class="how-title">กรอกข้อมูลของคุณ</div>
+        <div class="how-desc">วันที่เริ่มงาน อัตราเงินเดือน และรายละเอียดที่เกี่ยวข้อง</div>
+      </div>
+      <div class="how-item fade-up">
+        <div class="how-num">03</div>
+        <div class="how-title">รับผลลัพธ์ทันที</div>
+        <div class="how-desc">ตัวเลขชัดเจน พร้อมรายละเอียดการคำนวณและฐานกฎหมายอ้างอิง</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="section-label">คำถามที่พบบ่อย</div>
+    <h2 class="section-title fade-up">ข้อสงสัยที่คนถามมากที่สุด</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">ลูกจ้างลาออกเองมีสิทธิ์รับเงินชดเชยไหม?</div>
+        <div class="faq-a">โดยทั่วไปไม่มีสิทธิ์รับเงินชดเชย เว้นแต่กรณีพิเศษ เช่น ทำงานครบ 6 ปีและนายจ้างปรับลดสวัสดิการ หรือกรณีเกษียณอายุที่อายุ 60 ปีและทำงานมาแล้ว 10 ปีขึ้นไป ซึ่งมีสิทธิ์รับเงินชดเชยเต็มตามอายุงาน</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">นายจ้างไม่จ่ายเงินชดเชย ต้องทำอย่างไร?</div>
+        <div class="faq-a">ยื่นเรื่องร้องเรียนที่สำนักงานสวัสดิการและคุ้มครองแรงงานในจังหวัดที่ทำงาน ภายใน 2 ปีนับจากวันเลิกจ้าง สายด่วน 1546 บริการฟรีตลอด 24 ชั่วโมง</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">เงินชดเชยต้องเสียภาษีไหม?</div>
+        <div class="faq-a">ได้รับยกเว้นภาษี 50% ของเงินชดเชย (สูงสุดไม่เกิน 100,000 บาท) และยกเว้นเต็มจำนวนหากมีอายุงาน 5 ปีขึ้นไปและอายุตัว 55 ปีขึ้นไป ควรขอหนังสือรับรองจากนายจ้างประกอบการยื่นภาษีด้วย</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">ค่าล่วงเวลาวันหยุดได้กี่เท่า?</div>
+        <div class="faq-a">วันธรรมดา (นอกเวลางาน) = 1.5 เท่า | วันหยุดประจำสัปดาห์ (ทำงานในเวลาปกติ) = 1 เท่า | วันหยุดประจำสัปดาห์ (นอกเวลางาน) = 3 เท่า | วันหยุดนักขัตฤกษ์ (ทำงานในเวลาปกติ) = 2 เท่า | วันหยุดนักขัตฤกษ์ (นอกเวลางาน) = 3 เท่า</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">ข้อมูลที่กรอกในเว็บนี้ถูกเก็บไหม?</div>
+        <div class="faq-a">ไม่ครับ — การคำนวณทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณเองเท่านั้น ไม่มีการส่งข้อมูลใดๆ ไปยังเซิร์ฟเวอร์ ไม่ต้อง login ไม่มีการเก็บข้อมูลส่วนตัว</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">WorkerThai</div>
+    <div class="footer-links">
+      <a href="#tools">เครื่องมือ</a>
+      <a href="#faq">FAQ</a>
+      <a href="mailto:contact@workerthai.com">ติดต่อ</a>
+    </div>
+    <div class="footer-note">
+      WorkerThai เป็นเครื่องมือช่วยประมาณการเท่านั้น ไม่ใช่คำปรึกษาทางกฎหมาย กรณีพิพาทควรปรึกษาทนายความหรือกรมสวัสดิการและคุ้มครองแรงงาน | contact@workerthai.com | © 2567 WorkerThai
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(el){
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!isOpen) item.classList.add('open');
+}
+
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}});
+},{threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
