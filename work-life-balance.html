@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เช็ก Work-Life Balance Score 2568 | แบบประเมินสมดุลชีวิตและงาน — WorkerThai</title>
+<meta name="description" content="แบบประเมิน Work-Life Balance Score 15 ข้อ วัดสมดุลชีวิตและงาน 5 มิติ พร้อมคำแนะนำปรับปรุงตามผลลัพธ์ส่วนตัว ใช้งานฟรีไม่ต้อง login">
+<meta name="keywords" content="work-life balance,สมดุลชีวิตงาน,แบบประเมิน,burnout,สุขภาพจิตคนทำงาน,ชั่วโมงทำงาน">
+<meta property="og:title" content="เช็ก Work-Life Balance Score — WorkerThai">
+<meta property="og:description" content="แบบประเมิน 15 ข้อ วัด 5 มิติ พร้อมคำแนะนำส่วนตัว">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://workerthai.com/work-life-balance.html">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://workerthai.com/work-life-balance.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0f2744;--navy-mid:#1a3a5c;--gold:#c8973a;--gold-light:#e8b86d;
+  --cream:#faf7f2;--cream-dark:#f0ebe0;--text:#1a1a2e;--text-muted:#5a5a6e;
+  --white:#ffffff;--success:#1a6b3c;--danger:#a32d2d;--border:rgba(15,39,68,0.1);
+  --info:#0c447c;--purple:#534AB7;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Sarabun',sans-serif;background:var(--cream);color:var(--text);line-height:1.7}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(15,39,68,0.97);backdrop-filter:blur(12px);padding:0 5vw}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);text-decoration:none}
+.nav-logo span{color:rgba(255,255,255,0.5);font-family:'Sarabun',sans-serif;font-weight:300;font-size:13px;margin-left:8px}
+.nav-back{color:rgba(255,255,255,0.6);text-decoration:none;font-size:13px}
+.nav-back:hover{color:var(--gold-light)}
+.page-hero{background:var(--navy);padding:100px 5vw 48px;text-align:center}
+.page-hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(200,151,58,0.12);border:1px solid rgba(200,151,58,0.25);color:var(--gold-light);font-size:12px;padding:5px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:0.05em}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,42px);color:var(--white);margin-bottom:12px;line-height:1.3}
+.page-hero p{font-size:15px;color:rgba(255,255,255,0.55);max-width:560px;margin:0 auto}
+.wrap{max-width:800px;margin:0 auto;padding:40px 5vw 80px}
+.ad-zone{background:var(--cream-dark);border:1px dashed rgba(15,39,68,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:12px;margin:24px 0}
+.ad-top{height:90px}.ad-mid{height:250px}
+
+/* Progress */
+.quiz-progress{margin-bottom:28px}
+.prog-bar{background:var(--cream-dark);border-radius:4px;height:6px;margin-bottom:8px;overflow:hidden}
+.prog-fill{height:6px;background:var(--navy);border-radius:4px;transition:width .4s}
+.prog-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--text-muted)}
+
+/* Section label */
+.dim-label{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:12px}
+.dim-1{background:rgba(200,151,58,0.1);color:#854F0B}
+.dim-2{background:rgba(12,68,124,0.08);color:var(--info)}
+.dim-3{background:rgba(83,74,183,0.08);color:var(--purple)}
+.dim-4{background:rgba(26,107,60,0.08);color:var(--success)}
+.dim-5{background:rgba(163,45,45,0.08);color:var(--danger)}
+
+/* Question card */
+.q-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:28px;margin-bottom:16px;box-shadow:0 2px 16px rgba(15,39,68,0.04)}
+.q-num{font-size:12px;color:var(--text-muted);margin-bottom:8px}
+.q-text{font-size:16px;font-weight:500;color:var(--navy);margin-bottom:20px;line-height:1.5}
+
+/* Likert scale */
+.likert{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.likert-opt{padding:10px 6px;border:1px solid var(--border);border-radius:10px;text-align:center;cursor:pointer;transition:all .15s;font-size:12px;color:var(--text-muted);line-height:1.3}
+.likert-opt:hover{border-color:rgba(200,151,58,0.4);background:rgba(200,151,58,0.04)}
+.likert-opt.selected{border-color:var(--navy);background:var(--navy);color:var(--white)}
+.likert-emoji{font-size:20px;display:block;margin-bottom:4px}
+
+/* Nav buttons */
+.q-nav{display:flex;gap:10px;margin-top:8px}
+.q-btn{flex:1;padding:12px;font-size:14px;font-weight:600;border:none;border-radius:10px;cursor:pointer;font-family:'Sarabun',sans-serif;transition:all .2s}
+.q-btn.prev{background:var(--cream-dark);color:var(--text-muted)}
+.q-btn.prev:hover{background:var(--border)}
+.q-btn.next{background:var(--navy);color:var(--white)}
+.q-btn.next:hover{background:var(--navy-mid)}
+.q-btn:disabled{opacity:.4;cursor:not-allowed}
+
+/* Result */
+.result-wrap{display:none}
+.result-wrap.show{display:block}
+
+.result-hero{background:var(--navy);border-radius:16px;padding:32px;margin-bottom:20px;text-align:center}
+.result-label{font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:8px;letter-spacing:0.05em}
+.score-ring{position:relative;width:140px;height:140px;margin:0 auto 16px}
+.score-ring svg{transform:rotate(-90deg)}
+.score-ring-track{fill:none;stroke:rgba(255,255,255,0.1);stroke-width:10}
+.score-ring-fill{fill:none;stroke:var(--gold);stroke-width:10;stroke-linecap:round;transition:stroke-dashoffset 1s ease}
+.score-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
+.score-num{font-size:36px;font-weight:700;color:var(--gold-light);font-family:'Playfair Display',serif;line-height:1}
+.score-max{font-size:14px;color:rgba(255,255,255,0.4)}
+.result-title{font-family:'Playfair Display',serif;font-size:22px;color:var(--white);margin-bottom:6px}
+.result-desc{font-size:13px;color:rgba(255,255,255,0.55);max-width:460px;margin:0 auto}
+
+/* Dimension bars */
+.dim-bars{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:20px}
+.dim-bars h3{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:16px}
+.dim-row{margin-bottom:14px}
+.dim-row:last-child{margin-bottom:0}
+.dim-row-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.dim-name{font-size:13px;font-weight:500;color:var(--text)}
+.dim-score-label{font-size:12px;color:var(--text-muted)}
+.dim-bar-bg{background:var(--cream-dark);border-radius:4px;height:8px;overflow:hidden}
+.dim-bar-fill{height:8px;border-radius:4px;transition:width 1s ease}
+.fill-good{background:var(--success)}
+.fill-ok{background:var(--gold)}
+.fill-bad{background:var(--danger)}
+
+/* Advice */
+.advice-list{display:flex;flex-direction:column;gap:12px;margin-bottom:0}
+.advice-item{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;padding:16px;background:var(--cream);border-radius:10px;border:1px solid rgba(15,39,68,0.06)}
+.advice-icon{font-size:18px;text-align:center;padding-top:2px}
+.advice-title{font-size:14px;font-weight:500;color:var(--navy);margin-bottom:3px}
+.advice-desc{font-size:13px;color:var(--text-muted);line-height:1.5}
+
+.info-box{border-left:3px solid var(--info);border-radius:0 10px 10px 0;background:rgba(12,68,124,0.06);padding:12px 16px;font-size:13px;color:var(--info);line-height:1.6;margin-bottom:16px}
+
+.action-row{display:flex;gap:10px;margin-top:16px}
+.action-btn{flex:1;padding:11px;font-size:13px;border:1px solid var(--border);border-radius:8px;background:var(--white);color:var(--text-muted);cursor:pointer;font-family:'Sarabun',sans-serif;display:flex;align-items:center;justify-content:center;gap:6px;transition:all .15s;text-decoration:none}
+.action-btn:hover{background:var(--cream-dark);border-color:rgba(15,39,68,0.2)}
+.action-btn.primary{background:var(--navy);color:var(--white);border-color:var(--navy)}
+.action-btn.primary:hover{background:var(--navy-mid)}
+
+.disclaimer{background:var(--cream-dark);border-radius:10px;padding:16px 20px;font-size:12px;color:var(--text-muted);line-height:1.7;margin-bottom:24px;margin-top:24px}
+footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:32px 5vw}
+.footer-inner{max-width:800px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:'Playfair Display',serif;color:var(--gold);font-size:16px}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:12px}
+.footer-links a:hover{color:var(--gold-light)}
+.footer-note{font-size:11px;color:rgba(255,255,255,0.2);width:100%;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.06)}
+
+@media(max-width:480px){
+  .likert{grid-template-columns:repeat(5,1fr);gap:4px}
+  .likert-opt{padding:8px 2px;font-size:10px}
+  .action-row{flex-direction:column}
+}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2430142974372435" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">WorkerThai<span>รู้สิทธิ์ก่อน ตัดสินใจได้เอง</span></a>
+    <a href="/" class="nav-back">← กลับหน้าหลัก</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-badge">⚖️ แบบประเมินสมดุลชีวิตและงาน</div>
+  <h1>Work-Life Balance Score</h1>
+  <p>15 ข้อ · 5 มิติ · พร้อมคำแนะนำส่วนตัว · ใช้เวลาประมาณ 3 นาที</p>
+</div>
+
+<div class="wrap">
+
+  <div class="ad-zone ad-top">โฆษณา — Google AdSense 728×90</div>
+
+  <!-- Quiz -->
+  <div id="quizSection">
+    <div class="quiz-progress">
+      <div class="prog-bar"><div class="prog-fill" id="progFill" style="width:0%"></div></div>
+      <div class="prog-meta"><span id="progText">ข้อ 1 จาก 15</span><span id="progPct">0%</span></div>
+    </div>
+
+    <div class="q-card" id="qCard">
+      <div class="dim-label dim-1" id="dimLabel">⏰ เวลา & ชั่วโมงงาน</div>
+      <div class="q-num" id="qNum">ข้อ 1 / 15</div>
+      <div class="q-text" id="qText">Loading...</div>
+      <div class="likert" id="likertOpts"></div>
+      <div class="q-nav">
+        <button class="q-btn prev" id="prevBtn" onclick="prevQ()" disabled>← ก่อนหน้า</button>
+        <button class="q-btn next" id="nextBtn" onclick="nextQ()" disabled>ถัดไป →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Result -->
+  <div class="result-wrap" id="resultSection">
+
+    <div class="result-hero">
+      <div class="result-label">WORK-LIFE BALANCE SCORE</div>
+      <div class="score-ring">
+        <svg viewBox="0 0 140 140" width="140" height="140">
+          <circle class="score-ring-track" cx="70" cy="70" r="58"/>
+          <circle class="score-ring-fill" id="ringFill" cx="70" cy="70" r="58"
+            stroke-dasharray="364.4" stroke-dashoffset="364.4"/>
+        </svg>
+        <div class="score-text">
+          <div class="score-num" id="scoreBig">0</div>
+          <div class="score-max">/ 75</div>
+        </div>
+      </div>
+      <div class="result-title" id="resultTitle">—</div>
+      <div class="result-desc" id="resultDesc">—</div>
+    </div>
+
+    <div class="dim-bars">
+      <h3>📊 คะแนนแยกตามมิติ</h3>
+      <div id="dimBarsContent"></div>
+    </div>
+
+    <div class="q-card" style="padding:24px">
+      <div style="font-size:15px;font-weight:600;color:var(--navy);margin-bottom:16px">💡 คำแนะนำสำหรับคุณ</div>
+      <div class="advice-list" id="adviceList"></div>
+    </div>
+
+    <div class="ad-zone ad-mid">โฆษณา — Google AdSense 300×250</div>
+
+    <div class="action-row">
+      <button class="action-btn primary" onclick="retake()">🔄 ทำใหม่</button>
+      <button class="action-btn" onclick="shareResult()">📋 คัดลอกผลลัพธ์</button>
+      <a href="burnout-test.html" class="action-btn">🔥 เช็ก Burnout ด้วย</a>
+    </div>
+
+    <div class="info-box" style="margin-top:16px">
+      💡 ทำแบบประเมินนี้ซ้ำทุก 1–3 เดือน เพื่อติดตามพัฒนาการ ผลลัพธ์อาจเปลี่ยนได้ตามสถานการณ์
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    แบบประเมินนี้ไม่ใช่เครื่องมือวินิจฉัยทางการแพทย์ ผลลัพธ์เป็นการประเมินเบื้องต้นเท่านั้น หากมีความกังวลด้านสุขภาพจิต ควรพบผู้เชี่ยวชาญ สายด่วน 1323 ให้บริการฟรีตลอด 24 ชม.
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">WorkerThai</div>
+    <div class="footer-links">
+      <a href="burnout-test.html">เช็ก Burnout</a>
+      <a href="depression-work.html">ซึมเศร้าจากงาน</a>
+      <a href="toxic-workplace.html">Toxic Workplace</a>
+      <a href="career-roadmap.html">Career Roadmap</a>
+    </div>
+    <div class="footer-note">WorkerThai.com — ข้อมูลเพื่อการศึกษา ไม่ใช่การวินิจฉัยทางการแพทย์ | © 2568</div>
+  </div>
+</footer>
+
+<script>
+const DIMS = [
+  { id: 'time',    label: '⏰ เวลา & ชั่วโมงงาน',   cls: 'dim-1' },
+  { id: 'rest',    label: '😴 การพักผ่อน & ฟื้นฟู',  cls: 'dim-2' },
+  { id: 'social',  label: '👥 ความสัมพันธ์',         cls: 'dim-3' },
+  { id: 'meaning', label: '🎯 ความหมายในงาน',         cls: 'dim-4' },
+  { id: 'control', label: '🎛️ การควบคุมชีวิต',       cls: 'dim-5' },
+];
+
+const QUESTIONS = [
+  // Time (3q)
+  { dim: 0, text: 'ในช่วง 1 เดือนที่ผ่านมา คุณทำงานเกินเวลางานปกติ (OT) บ่อยแค่ไหน?' , reverse: true },
+  { dim: 0, text: 'คุณสามารถ "ปิดสวิตช์" ความคิดเรื่องงานได้หลังเลิกงานหรือวันหยุดสุดสัปดาห์ไหม?' , reverse: false },
+  { dim: 0, text: 'คุณมีเวลาทำสิ่งที่ชอบนอกจากงาน (งานอดิเรก การออกกำลังกาย ครอบครัว) บ้างไหม?' , reverse: false },
+  // Rest (3q)
+  { dim: 1, text: 'คุณนอนหลับเพียงพอ (7–8 ชั่วโมง) และรู้สึกพักผ่อนเต็มที่ตอนตื่นนอนบ้างไหม?' , reverse: false },
+  { dim: 1, text: 'คุณสามารถใช้วันลาพักร้อนได้จริงโดยไม่รู้สึกผิดหรือต้องเช็กงานตลอดไหม?' , reverse: false },
+  { dim: 1, text: 'คุณรู้สึกเหนื่อยล้าสะสม (chronically tired) ในช่วง 1 เดือนที่ผ่านมาบ่อยแค่ไหน?' , reverse: true },
+  // Social (3q)
+  { dim: 2, text: 'คุณมีเวลาคุณภาพกับครอบครัวหรือคนที่รักในช่วงสัปดาห์ที่ผ่านมาพอไหม?' , reverse: false },
+  { dim: 2, text: 'ความสัมพันธ์ของคุณกับคนสำคัญในชีวิตได้รับผลกระทบจากงานมากแค่ไหน?' , reverse: true },
+  { dim: 2, text: 'คุณรักษาความสัมพันธ์กับเพื่อนหรือสังคมนอกงานได้ดีแค่ไหน?' , reverse: false },
+  // Meaning (3q)
+  { dim: 3, text: 'คุณรู้สึกว่างานที่ทำมีความหมายและ impact ที่คุณพอใจบ้างไหม?' , reverse: false },
+  { dim: 3, text: 'คุณรู้สึกสมดุลระหว่างเป้าหมายงานและเป้าหมายชีวิตส่วนตัวได้ดีแค่ไหน?' , reverse: false },
+  { dim: 3, text: 'คุณรู้สึกว่าการเสียสละชีวิตส่วนตัวเพื่องาน "คุ้มค่า" ในตอนนี้ไหม?' , reverse: false },
+  // Control (3q)
+  { dim: 4, text: 'คุณรู้สึกว่ามีอำนาจในการจัดการเวลาและลำดับความสำคัญในงานได้ด้วยตัวเองไหม?' , reverse: false },
+  { dim: 4, text: 'คุณสามารถปฏิเสธงานหรือ request ที่เกินขอบเขตได้อย่างสบายใจไหม?' , reverse: false },
+  { dim: 4, text: 'โดยรวม คุณรู้สึกว่าชีวิตอยู่ใน "balance" ที่คุณพอใจแค่ไหน?' , reverse: false },
+];
+
+const OPTS = [
+  { emoji: '😞', label: 'แทบไม่เลย' },
+  { emoji: '😐', label: 'นาน ๆ ครั้ง' },
+  { emoji: '🙂', label: 'บางครั้ง' },
+  { emoji: '😊', label: 'บ่อย ๆ' },
+  { emoji: '😄', label: 'เสมอ' },
+];
+
+let current = 0;
+let answers = new Array(QUESTIONS.length).fill(null);
+
+function renderQ() {
+  const q = QUESTIONS[current];
+  const dim = DIMS[q.dim];
+  document.getElementById('dimLabel').textContent = dim.label;
+  document.getElementById('dimLabel').className = 'dim-label ' + dim.cls;
+  document.getElementById('qNum').textContent = `ข้อ ${current + 1} / ${QUESTIONS.length}`;
+  document.getElementById('qText').textContent = q.text;
+
+  const pct = Math.round(current / QUESTIONS.length * 100);
+  document.getElementById('progFill').style.width = pct + '%';
+  document.getElementById('progText').textContent = `ข้อ ${current + 1} จาก ${QUESTIONS.length}`;
+  document.getElementById('progPct').textContent = pct + '%';
+
+  const container = document.getElementById('likertOpts');
+  container.innerHTML = '';
+  OPTS.forEach((opt, i) => {
+    const val = i + 1;
+    const div = document.createElement('div');
+    div.className = 'likert-opt' + (answers[current] === val ? ' selected' : '');
+    div.innerHTML = `<span class="likert-emoji">${opt.emoji}</span>${opt.label}`;
+    div.onclick = () => selectOpt(val);
+    container.appendChild(div);
+  });
+
+  document.getElementById('prevBtn').disabled = current === 0;
+  document.getElementById('nextBtn').disabled = answers[current] === null;
+  document.getElementById('nextBtn').textContent = current === QUESTIONS.length - 1 ? 'ดูผลลัพธ์ →' : 'ถัดไป →';
+}
+
+function selectOpt(val) {
+  answers[current] = val;
+  document.querySelectorAll('.likert-opt').forEach((el, i) => {
+    el.classList.toggle('selected', i + 1 === val);
+  });
+  document.getElementById('nextBtn').disabled = false;
+}
+
+function nextQ() {
+  if (current < QUESTIONS.length - 1) {
+    current++;
+    renderQ();
+  } else {
+    showResult();
+  }
+}
+
+function prevQ() {
+  if (current > 0) { current--; renderQ(); }
+}
+
+function calcScore(rawVal, reverse) {
+  return reverse ? (6 - rawVal) : rawVal;
+}
+
+function showResult() {
+  // Calc dim scores
+  const dimScores = DIMS.map(() => 0);
+  const dimCounts = DIMS.map(() => 0);
+  let total = 0;
+
+  QUESTIONS.forEach((q, i) => {
+    const sc = calcScore(answers[i], q.reverse);
+    dimScores[q.dim] += sc;
+    dimCounts[q.dim]++;
+    total += sc;
+  });
+
+  // Hide quiz, show result
+  document.getElementById('quizSection').style.display = 'none';
+  const rs = document.getElementById('resultSection');
+  rs.classList.add('show');
+
+  // Score ring (max 75)
+  const maxScore = QUESTIONS.length * 5;
+  const pct = total / maxScore;
+  const circumference = 364.4;
+  setTimeout(() => {
+    document.getElementById('ringFill').style.strokeDashoffset = circumference * (1 - pct);
+  }, 100);
+  document.getElementById('scoreBig').textContent = total;
+
+  // Level
+  let title, desc, color;
+  if (pct >= 0.8) {
+    title = '🌟 สมดุลดีมาก'; desc = 'คุณบริหารชีวิตและงานได้ดีเยี่ยม รักษาสิ่งที่ดีนี้ไว้ และแชร์เทคนิคกับคนรอบข้างด้วย'; color = '#1a6b3c';
+  } else if (pct >= 0.6) {
+    title = '✅ สมดุลพอใช้ได้'; desc = 'มีบางมิติที่ยังพัฒนาได้ ดูคำแนะนำด้านล่างเพื่อเสริมจุดอ่อน'; color = '#c8973a';
+  } else if (pct >= 0.4) {
+    title = '⚠️ ต้องระวัง'; desc = 'มีหลายด้านที่กำลังขาดสมดุล ควรเริ่มปรับเปลี่ยนก่อนที่จะเริ่มกระทบสุขภาพกาย-จิต'; color = '#c8973a';
+  } else {
+    title = '🚨 ต้องดูแลตัวเองด่วน'; desc = 'ชีวิตและงานขาดสมดุลอย่างมาก ควรพูดคุยกับผู้เชี่ยวชาญหรือคนที่ไว้ใจได้โดยเร็ว'; color = '#a32d2d';
+  }
+
+  document.getElementById('resultTitle').textContent = title;
+  document.getElementById('resultDesc').textContent = desc;
+  document.getElementById('ringFill').style.stroke = color;
+
+  // Dim bars
+  const barsHtml = DIMS.map((dim, i) => {
+    const max = dimCounts[i] * 5;
+    const sc = dimScores[i];
+    const p = Math.round(sc / max * 100);
+    const cls = p >= 70 ? 'fill-good' : p >= 45 ? 'fill-ok' : 'fill-bad';
+    return `<div class="dim-row">
+      <div class="dim-row-header">
+        <span class="dim-name">${dim.label}</span>
+        <span class="dim-score-label">${sc}/${max} (${p}%)</span>
+      </div>
+      <div class="dim-bar-bg"><div class="dim-bar-fill ${cls}" style="width:${p}%"></div></div>
+    </div>`;
+  }).join('');
+  document.getElementById('dimBarsContent').innerHTML = barsHtml;
+
+  // Advice
+  const advices = [];
+  const weakDims = dimScores.map((sc, i) => ({ i, pct: sc / (dimCounts[i] * 5) }))
+    .filter(d => d.pct < 0.6).sort((a, b) => a.pct - b.pct);
+
+  const adviceBank = [
+    { icon: '⏰', title: 'ตั้งขอบเขตเวลางานชัดเจน', desc: 'กำหนดเวลาเลิกงานที่แน่นอน ปิด notification งานหลังเวลานั้น แจ้งหัวหน้าและเพื่อนร่วมงานถึงขอบเขตนี้' },
+    { icon: '😴', title: 'รักษา Sleep schedule ให้สม่ำเสมอ', desc: 'นอนและตื่นเวลาเดิมทุกวัน แม้วันหยุด หลีกเลี่ยงหน้าจอ 30 นาทีก่อนนอน สร้าง routine ผ่อนคลาย' },
+    { icon: '👥', title: 'กำหนด "time block" กับคนที่รัก', desc: 'จองเวลาในปฏิทินสำหรับครอบครัวและเพื่อนเหมือนนัดประชุม อย่าให้งานมาขอขึ้นทับ' },
+    { icon: '🎯', title: 'ทบทวนเป้าหมายชีวิต', desc: 'ถามตัวเองว่า "5 ปีข้างหน้าอยากให้ชีวิตเป็นยังไง?" แล้วเช็กว่าสิ่งที่ทำอยู่ตอนนี้พาไปทิศทางนั้นไหม' },
+    { icon: '🎛️', title: 'ฝึกปฏิเสธอย่างมีประสิทธิภาพ', desc: 'เรียนรู้ที่จะพูด "ไม่ได้" กับงานที่เกินขอบเขต ใช้ประโยคว่า "ผมต้องตรวจสอบ capacity ก่อน" แทนการรับงานทันที' },
+  ];
+
+  weakDims.slice(0, 3).forEach(d => {
+    advices.push(adviceBank[d.i]);
+  });
+
+  if (advices.length === 0) {
+    advices.push({ icon: '🌟', title: 'รักษาสิ่งดีๆ ที่มีอยู่', desc: 'คุณบริหารสมดุลได้ดีแล้ว ลองแบ่งปันเทคนิคกับเพื่อนร่วมงาน และทำแบบประเมินอีกครั้งใน 1–3 เดือน' });
+  }
+
+  if (pct < 0.5) {
+    advices.push({ icon: '🧠', title: 'พิจารณาพูดคุยกับผู้เชี่ยวชาญ', desc: 'หากรู้สึกว่าปรับเองได้ยาก นักจิตวิทยาหรือโค้ชสามารถช่วยได้มาก เบิกได้จากประกันสังคม สายด่วน 1323 ฟรีตลอด 24 ชม.' });
+  }
+
+  document.getElementById('adviceList').innerHTML = advices.map(a =>
+    `<div class="advice-item"><div class="advice-icon">${a.icon}</div><div><div class="advice-title">${a.title}</div><div class="advice-desc">${a.desc}</div></div></div>`
+  ).join('');
+
+  window._lastScore = { total, maxScore, title };
+}
+
+function shareResult() {
+  const s = window._lastScore;
+  if (!s) return;
+  const text = `Work-Life Balance Score (WorkerThai.com)\n${s.title}\nคะแนน: ${s.total}/${s.maxScore}\nทดสอบได้ที่: workerthai.com/work-life-balance.html`;
+  navigator.clipboard.writeText(text).then(() => alert('คัดลอกแล้ว!'));
+}
+
+function retake() {
+  current = 0;
+  answers = new Array(QUESTIONS.length).fill(null);
+  document.getElementById('quizSection').style.display = '';
+  document.getElementById('resultSection').classList.remove('show');
+  renderQ();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+renderQ();
+</script>
+
+</body>
+</html>
